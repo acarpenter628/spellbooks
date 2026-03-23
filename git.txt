@@ -1,0 +1,33 @@
+
+Undo the last commit and discard the changes completely:
+git reset --hard HEAD~1
+
+Undo the last commit, but keep the changes in the working copy???
+git reset HEAD~1 
+
+
+Branch with sorting:
+git branch -v --sort=-committerdate  # DESC
+git branch -v --sort=committerdate  # ASC
+
+
+git stash apply n	
+restore stashed modification but do not remove from stash list
+(n specifies stash number, default is 0 which is most recent stash)
+
+
+git stash drop n	
+remove stashed state from stash list but don't apply
+
+git diff stash@{1}
+    diff stash vs working copy
+
+git stash clear	
+clear stash list
+
+Cherry pick without committing :
+git cherry-pick -n <HASH>
+
+Remove from repo without deleting:
+File:  git rm -f --cached  folder/derp.txt
+Folder:  git rm -f -r --cached  folder/subfolder/
