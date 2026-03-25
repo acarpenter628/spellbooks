@@ -3,18 +3,30 @@
 :Ex to open file picker dang
 
 
+View current setting:
+    setting:
+        :lua print(vim.o.tabstop)
+    table:
+       :lua print(vim.inspect(vim.g.termfeatures))
+
 To learn:
 tabs
     :help tabpage
     hotkey to make a new tab
         :tab split	    " opens current buffer in new tab page
-        g TAB to toggle between the last 2
+            <leader> w T
+        Switching
+            g TAB to toggle between the last 2
+            gt for next tab, wraps
+                or gT for previous
+            ctrl pgup/down
+                what can I remap those to?  ctrl ,. maybe?  
+        :tabs to see them
 recording macros
     q[register] to start recording
     q to end recording
     @[register] to play recording
         Q or @@ to play the last one
-
 equivalent of highlight and ctrl+shift+f
 function/variable outline?  I think that's done in telescope?
     gO
@@ -41,7 +53,20 @@ Substitute:
     or
         Visual select (by lines?) to limit it to there
 
+Ctrl A to increment a number
+Ctrl X to decrement a number
+I could maybe do a record a register to copy/paste a line and increment the number.  could be neat
 
+
+Syntax highlighting for note files?
+ - comment things out
+    - do I need a full lsp to gcc?  I can map ctrl + / to insert // at the beginning of the line or something
+ - highlight - and * and ~?
+ - numbers?
+ - strings/parens
+ - not '
+ - punctuation?  At least question mark
+ - syntax highlighting for like AI (action item), similar to how i have //ABC TODO NOW 
 
 netrw:
     :Ex to enter

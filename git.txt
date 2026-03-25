@@ -10,6 +10,9 @@ Branch with sorting:
 git branch -v --sort=-committerdate  # DESC
 git branch -v --sort=committerdate  # ASC
 
+git merge --squash <branchname>
+    pull branch into staging area
+    does stage, but doesn't commit
 
 git stash apply n	
 restore stashed modification but do not remove from stash list
