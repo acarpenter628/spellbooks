@@ -123,3 +123,8 @@ To run a script at startup:
     sudo systemctl daemon-reload
     sudo systemctl enable --now myscript.service
 
+
+
+
+Adjust brightness:
+xrandr --output eDP-1 --brightness .5
