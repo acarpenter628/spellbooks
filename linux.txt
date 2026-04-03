@@ -95,12 +95,17 @@ Shellcheck is a tool to "compile" shell scripts
 
 
 look up curly brace expansion
+https://www.geeksforgeeks.org/linux-unix/bash-brace-expansion-in-linux-with-examples/
+cp -v file1.txt{,.bak}
 
 
 
 Ctrl+x, Ctrl+e to open your current line in $EDITOR
 fc to open your previous line in $EDITOR
 
+
+batch rename:
+for f in *.txt; do mv -- "$f" "new_$f"; done
 
 
 To run a script at startup:
@@ -128,3 +133,6 @@ To run a script at startup:
 
 Adjust brightness:
 xrandr --output eDP-1 --brightness .5
+
+
+untar:  tar -xzvf archive.tar.gz

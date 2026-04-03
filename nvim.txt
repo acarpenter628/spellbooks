@@ -2,6 +2,8 @@
 
 :Ex to open file picker dang
 
+:help vim.keymap
+
 
 View current setting:
     setting:
@@ -37,7 +39,6 @@ substitutes
 gotta learn diffs so I can troll brett
 netrw:
     how to exit back to the file I was in?
-/bin/bash: s: command not found
 
 
 Session saves folding, it looks like
@@ -62,6 +63,7 @@ Syntax highlighting for note files?
  - comment things out
     - do I need a full lsp to gcc?  I can map ctrl + / to insert // at the beginning of the line or something
  - highlight - and * and ~?
+  - set tab width to 2 if I'm in a note file so I can fold?
  - numbers?
  - strings/parens
  - not '
@@ -96,7 +98,6 @@ buffers
     :b space tab to switch
         or space space to fuzzyfind
 marks
-toggle non-print characters for copy/paste
 auto complete
     ^y to accept
     ^n/p to cycle
@@ -154,17 +155,14 @@ Completion:
 
 To learn:
 Jump to git changes?  Act on them?
-    changlist?
-    g, g; to go through changelist, but it doesn't cycle
-        also not necessarily git related
-
-    fugitive plugin
     gitsigns?
         current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
         :Gitsigns diffthis
             peel one onion at a time tho
+    Added some keys for going to the next diff hunk
 
 undo/redo - don't fuck it up
+    undo tree?
 
 tabs?
     gt to go to next tab page
