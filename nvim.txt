@@ -1,7 +1,5 @@
 
 
-:Ex to open file picker dang
-
 :help vim.keymap
 
 
@@ -29,17 +27,13 @@ recording macros
     q to end recording
     @[register] to play recording
         Q or @@ to play the last one
-equivalent of highlight and ctrl+shift+f
 function/variable outline?  I think that's done in telescope?
     gO
-add ignore list to searches
 better session handling?
-substitutes
-    & might be a good ctrlD replacement from vscode
 gotta learn diffs so I can troll brett
-netrw:
-    how to exit back to the file I was in?
 
+[<space> to insert line above
+]<space> to insert line below
 
 Session saves folding, it looks like
 
@@ -47,12 +41,25 @@ Substitute:
     * over word, then :s//[replacement], then n& to do the next one
         I think there's something I can use for like "current selected" to instead of having to * first
             <C-r><C-w> to paste word under cursor
+        But I want to use my selection, not just the word. 
+            - copy the replacement
+            - highlight/visual select the old
+            - *
+            - N (?)
+            - :s//<C-R>"
+            - n&
+            Surely I can map this to something?
+        Maybe I can git gud at different registers.  select, "ay, "by, line select the area, then maybe a mapping to :s/<C-r>a/<C-r>b/g in visual mode
+        maybe I do mappings for like leader y a, leader y b, numbers?
+        Numbers autofill with deleted text
     or
         :%s/[old]/[replacement]/gc, then y/n/q for each one
             do I need the %? - this makes it global for the whole file.  not needed if I have a selection?  
             I think this is the one
     or
         Visual select (by lines?) to limit it to there
+
+I think I can map *N:%s//<C-r>"/gc<cr> to a key?
 
 Ctrl A to increment a number
 Ctrl X to decrement a number
@@ -75,6 +82,7 @@ netrw:
     % for new file
     v for open in vertical split
     o for open in horiz split
+    Need to learn neotree equivalent
 
 paste in command mode:
 Ctrl+R [register]
@@ -124,8 +132,12 @@ Navigate within Buffer
     ' to jump around
        '' - last place jumped from 
        '[] - beginning/end of previously changed/yanked text
-       '" - line you were at last editing this buffer
+       '" - line you were at last exiting this buffer
+       '. - for last change in this buffer
+       '^ - for last insert mode
     leader / - fuzzy find
+
+    <number>gg - jump to line number
 
     ]] to next function
 
@@ -180,7 +192,18 @@ marks
 
 Projects
     Keep my buffers open?
+    Is there like a history view of where I've jumped to and from?
 
+
+Diff Mode:
+    ]c / [c to go to next/prev change
+    dp :diffput
+    do :diffget (obtain)
+    Align by putting the same mark in both files, then doing :set diffanchors='a
+    :diffoff to exit
+    need to add vertical to diffopt?
+
+    
 
 
 Equivalent of Ctrl+D in VSCode
