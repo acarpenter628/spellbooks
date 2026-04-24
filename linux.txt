@@ -146,9 +146,21 @@ apps to download for new setups:
     nvim
     ouch
     ascii-matrix
-    goonfetch??
     zellij
     OpenComic?  yomikiru?
     nerdfont
+    wezterm
+
+What do I need to just use a mac as a terminal?
+    most of the above
+    ghostty?  doesn't support sixel.  iTerm2 does though.  
+    Iterm2 looks like it has a "scroll/copy with keyboard" mode.  
+        Looks like zellij has this if I'm not in windows terminal or nomachine?  
+        or I can do unlock s e to open the buffer in nvim for copying
+        wezterm looks like the only thing that has both retro effects and sixel support
+    can I remap ctrl?  sounds like it
+    It uses zsh by default but I can download bash.  
+
 
 put my git config in github?
+Can I add a zellij  hotkey that maps to CtrlX CtrlE?
