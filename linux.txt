@@ -1,3 +1,6 @@
+file [file] - see basic info about file
+exiftool [file.jpg] - see file exif data  (not installed it lookes like)
+
 Put my SSH keys on another computer:  ssh-copy-id linuxdev@rdulab-ud8
 open nvim remotely with my config:  nvim scp://linuxdev@rdulab-ud8//home/linuxdev/Downloads/
 
