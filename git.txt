@@ -2,11 +2,16 @@
 Undo the last commit and discard the changes completely:
 git reset --hard HEAD~1
 
-Undo the last commit, but keep the changes in the working copy???
+Undo the last commit (remove it from your history), but keep the changes from that commit in the working copy
 git reset HEAD~1 
 
+History preserving, undo a previous commit
+git revert -n <sha>
 
-Branch with sorting:
+See the diffs in a commit:
+git show <sha>
+
+Branch with sorting: (I think I put one of these in my gitconfig?)
 git branch -v --sort=-committerdate  # DESC
 git branch -v --sort=committerdate  # ASC
 
