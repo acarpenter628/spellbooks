@@ -1,6 +1,8 @@
 
 
 :help vim.keymap
+Shift + K to go to a help page
+   Not limited to vim
 
 
 View current setting:
@@ -10,6 +12,10 @@ View current setting:
        :lua print(vim.inspect(vim.g.termfeatures))
 
 To learn:
+quickfix list?
+Surround around my selection?
+Matt used the cool `gw` two letter jump in helix.  i think this is hop.vim or mini-jump2d
+He also mapped stuff to replace $ and ^/_,  gl and gh, I should do those
 tabs
     :help tabpage
     hotkey to make a new tab
@@ -36,6 +42,7 @@ gotta learn diffs so I can troll brett
 ]<space> to insert line below
 
 Session saves folding, it looks like
+
 
 Substitute:
     * over word, then :s//[replacement], then n& to do the next one
@@ -66,6 +73,11 @@ Ctrl X to decrement a number
 I could maybe do a record a register to copy/paste a line and increment the number.  could be neat
 
 
+navigations:  
+vi) or vi) or vib will select (within parenthesees)
+vt) will select up to the closing paren
+)/( will jump to previous/next sentence
+
 Syntax highlighting for note files?
  - comment things out
     - do I need a full lsp to gcc?  I can map ctrl + / to insert // at the beginning of the line or something
@@ -87,6 +99,7 @@ netrw:
 paste in command mode:
 Ctrl+R [register]
         " for unnamed
+
 
 
 panes / windows
@@ -113,9 +126,11 @@ auto complete
 g
     u/U for upper/lower
         use visual first?
+    v to go to your last visual select
         
 Searching
     * or # to search for highlighted text or active word
+    \< and \> indicate start and end of word
    
 Switch buffers
     double space - fuzzy find open buffers
@@ -166,21 +181,20 @@ Completion:
 
 
 To learn:
-Jump to git changes?  Act on them?
+Jump to git changes - <leader>gn
     gitsigns?
-        current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
         :Gitsigns diffthis
             peel one onion at a time tho
-    Added some keys for going to the next diff hunk
 
 undo/redo - don't fuck it up
     undo tree?
 
-tabs?
+tabs
     gt to go to next tab page
 
 
-folding?
+folding
+    za
 
 marks
     m{a-zA-z} to set and '{a-zA-z} to jump to.
@@ -191,7 +205,7 @@ marks
 
 
 Projects
-    Keep my buffers open?
+    Keep my buffers open? <leader>Sw / r
     Is there like a history view of where I've jumped to and from?
 
 
@@ -207,6 +221,7 @@ Diff Mode:
 
 
 Equivalent of Ctrl+D in VSCode
+    Did this in 
 Matt:
 You can either hit * over a word and it will jump to the next instance or you can press gd and it will go to the first instance in a file. After highlighting, hitting n will jump to the next instance in the file. Hitting N will jump to the previous instance in the file.
 Austin Carpenter

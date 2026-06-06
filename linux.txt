@@ -36,6 +36,7 @@ find files:
     find . -name "*.map"
         Then I can pipe that into a grep .map for highlighting I guess
         exclude with exclamation point:    find -name "*.bit*" ! -path "*path*"
+        I think I have to do something else to get it to follow simlinks
 
 
         print them all:  for file in $(find -name "*.crc*"); do cat "$file"; echo; done
@@ -144,12 +145,17 @@ untar:  tar -xzvf archive.tar.gz
 apps to download for new setups:
     ranger
     nvim
+        fd
+        ripgrep
     ouch
     ascii-matrix
     zellij
     OpenComic?  yomikiru?
     nerdfont
     wezterm
+    batcat
+    tldr
+    btop
 
 What do I need to just use a mac as a terminal?
     most of the above
