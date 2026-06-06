@@ -16,8 +16,13 @@ git branch -v --sort=-committerdate  # DESC
 git branch -v --sort=committerdate  # ASC
 
 git merge --squash <branchname>
-    pull branch into staging area
-    does stage, but doesn't commit
+   pull branch into staging area
+   does stage, but doesn't commit
+
+git merge --no-commit <branchname>
+   Merge without committing.
+git diff --staged
+   diff staged vs repo
 
 git stash apply n	
 restore stashed modification but do not remove from stash list
@@ -28,7 +33,7 @@ git stash drop n
 remove stashed state from stash list but don't apply
 
 git diff stash@{1}
-    diff stash vs working copy
+   diff stash vs working copy
 
 git stash clear	
 clear stash list

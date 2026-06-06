@@ -6,10 +6,10 @@ Shift + K to go to a help page
 
 
 View current setting:
-    setting:
-        :lua print(vim.o.tabstop)
-    table:
-       :lua print(vim.inspect(vim.g.termfeatures))
+   setting:
+      :lua print(vim.o.tabstop)
+   table:
+      :lua print(vim.inspect(vim.g.termfeatures))
 
 To learn:
 quickfix list?
@@ -17,24 +17,24 @@ Surround around my selection?
 Matt used the cool `gw` two letter jump in helix.  i think this is hop.vim or mini-jump2d
 He also mapped stuff to replace $ and ^/_,  gl and gh, I should do those
 tabs
-    :help tabpage
-    hotkey to make a new tab
-        :tab split	    " opens current buffer in new tab page
-            <leader> w T
-        Switching
-            g TAB to toggle between the last 2
-            gt for next tab, wraps
-                or gT for previous
-            ctrl pgup/down
-                what can I remap those to?  ctrl ,. maybe?  
-        :tabs to see them
+   :help tabpage
+   hotkey to make a new tab
+      :tab split	   " opens current buffer in new tab page
+         <leader> w T
+      Switching
+         g TAB to toggle between the last 2
+         gt for next tab, wraps
+            or gT for previous
+         ctrl pgup/down
+            what can I remap those to?  ctrl ,. maybe?  
+      :tabs to see them
 recording macros
-    q[register] to start recording
-    q to end recording
-    @[register] to play recording
-        Q or @@ to play the last one
+   q[register] to start recording
+   q to end recording
+   @[register] to play recording
+      Q or @@ to play the last one
 function/variable outline?  I think that's done in telescope?
-    gO
+   gO
 better session handling?
 gotta learn diffs so I can troll brett
 
@@ -45,26 +45,26 @@ Session saves folding, it looks like
 
 
 Substitute:
-    * over word, then :s//[replacement], then n& to do the next one
-        I think there's something I can use for like "current selected" to instead of having to * first
-            <C-r><C-w> to paste word under cursor
-        But I want to use my selection, not just the word. 
-            - copy the replacement
-            - highlight/visual select the old
-            - *
-            - N (?)
-            - :s//<C-R>"
-            - n&
-            Surely I can map this to something?
-        Maybe I can git gud at different registers.  select, "ay, "by, line select the area, then maybe a mapping to :s/<C-r>a/<C-r>b/g in visual mode
-        maybe I do mappings for like leader y a, leader y b, numbers?
-        Numbers autofill with deleted text
-    or
-        :%s/[old]/[replacement]/gc, then y/n/q for each one
-            do I need the %? - this makes it global for the whole file.  not needed if I have a selection?  
-            I think this is the one
-    or
-        Visual select (by lines?) to limit it to there
+   * over word, then :s//[replacement], then n& to do the next one
+      I think there's something I can use for like "current selected" to instead of having to * first
+         <C-r><C-w> to paste word under cursor
+      But I want to use my selection, not just the word. 
+         - copy the replacement
+         - highlight/visual select the old
+         - *
+         - N (?)
+         - :s//<C-R>"
+         - n&
+         Surely I can map this to something?
+      Maybe I can git gud at different registers.  select, "ay, "by, line select the area, then maybe a mapping to :s/<C-r>a/<C-r>b/g in visual mode
+      maybe I do mappings for like leader y a, leader y b, numbers?
+      Numbers autofill with deleted text
+   or
+      :%s/[old]/[replacement]/gc, then y/n/q for each one
+         do I need the %? - this makes it global for the whole file.  not needed if I have a selection?  
+         I think this is the one
+   or
+      Visual select (by lines?) to limit it to there
 
 I think I can map *N:%s//<C-r>"/gc<cr> to a key?
 
@@ -80,7 +80,7 @@ vt) will select up to the closing paren
 
 Syntax highlighting for note files?
  - comment things out
-    - do I need a full lsp to gcc?  I can map ctrl + / to insert // at the beginning of the line or something
+   - do I need a full lsp to gcc?  I can map ctrl + / to insert // at the beginning of the line or something
  - highlight - and * and ~?
   - set tab width to 2 if I'm in a note file so I can fold?
  - numbers?
@@ -90,138 +90,138 @@ Syntax highlighting for note files?
  - syntax highlighting for like AI (action item), similar to how i have //ABC TODO NOW 
 
 netrw:
-    :Ex to enter
-    % for new file
-    v for open in vertical split
-    o for open in horiz split
-    Need to learn neotree equivalent
+   :Ex to enter
+   % for new file
+   v for open in vertical split
+   o for open in horiz split
+   Need to learn neotree equivalent
 
 paste in command mode:
 Ctrl+R [register]
-        " for unnamed
+      " for unnamed
 
 
 
 panes / windows
 ^w as first key
-    map to space w? - done
-    s/v for split horizontal/vertical
-    hjkl to select panes
-    = to distribute them
-    previews:
-        } show tag in preview
-        z close preview
+   map to space w? - done
+   s/v for split horizontal/vertical
+   hjkl to select panes
+   = to distribute them
+   previews:
+      } show tag in preview
+      z close preview
 
-    ^hjkl to just jump directly
+   ^hjkl to just jump directly
 
 buffers
-    :ls to view
-    :b space tab to switch
-        or space space to fuzzyfind
+   :ls to view
+   :b space tab to switch
+      or space space to fuzzyfind
 marks
 auto complete
-    ^y to accept
-    ^n/p to cycle
+   ^y to accept
+   ^n/p to cycle
 
 g
-    u/U for upper/lower
-        use visual first?
-    v to go to your last visual select
-        
+   u/U for upper/lower
+      use visual first?
+   v to go to your last visual select
+      
 Searching
-    * or # to search for highlighted text or active word
-    \< and \> indicate start and end of word
+   * or # to search for highlighted text or active word
+   \< and \> indicate start and end of word
    
 Switch buffers
-    double space - fuzzy find open buffers
-    Switching buffers:
-        ]b / ]B to cycle
+   double space - fuzzy find open buffers
+   Switching buffers:
+      ]b / ]B to cycle
 
 
 Navigate within Buffer
-    Todo
-        jump to next function
-            ]]  looks like
-        function list?  pin to right?
+   Todo
+      jump to next function
+         ]]  looks like
+      function list?  pin to right?
 
-    ' to jump around
-       '' - last place jumped from 
-       '[] - beginning/end of previously changed/yanked text
-       '" - line you were at last exiting this buffer
-       '. - for last change in this buffer
-       '^ - for last insert mode
-    leader / - fuzzy find
+   ' to jump around
+      '' - last place jumped from 
+      '[] - beginning/end of previously changed/yanked text
+      '" - line you were at last exiting this buffer
+      '. - for last change in this buffer
+      '^ - for last insert mode
+   leader / - fuzzy find
 
-    <number>gg - jump to line number
+   <number>gg - jump to line number
 
-    ]] to next function
+   ]] to next function
 
-    {/} go to next/previous blank line?
-        beginning/end of paragraph
+   {/} go to next/previous blank line?
+      beginning/end of paragraph
 
-    % to go to matching parenthesee
+   % to go to matching parenthesee
 
-    gO for symbol list
-    gW for workspace symbol list?
+   gO for symbol list
+   gW for workspace symbol list?
 
 
-    Follow link in help  ^]
-        
+   Follow link in help  ^]
+      
 
 
 
 multi-clipboard
-    " lists them, select the letter/number, then y/d/p
+   " lists them, select the letter/number, then y/d/p
 
 
 Completion:
-    Ctrl n/p to cycle them
-    Ctrl Y to insert, maybe X?
+   Ctrl n/p to cycle them
+   Ctrl Y to insert, maybe X?
 
 
 
 To learn:
 Jump to git changes - <leader>gn
-    gitsigns?
-        :Gitsigns diffthis
-            peel one onion at a time tho
+   gitsigns?
+      :Gitsigns diffthis
+         peel one onion at a time tho
 
 undo/redo - don't fuck it up
-    undo tree?
+   undo tree?
 
 tabs
-    gt to go to next tab page
+   gt to go to next tab page
 
 
 folding
-    za
+   za
 
 marks
-    m{a-zA-z} to set and '{a-zA-z} to jump to.
-    Looks like lower case is for just setting/jumping to marks in the current buffer and upper case or number is for setting/jumping across buffers.
-    Then you can run :marks to see all set marks.
+   m{a-zA-z} to set and '{a-zA-z} to jump to.
+   Looks like lower case is for just setting/jumping to marks in the current buffer and upper case or number is for setting/jumping across buffers.
+   Then you can run :marks to see all set marks.
 
-    no "next mark"?
+   no "next mark"?
 
 
 Projects
-    Keep my buffers open? <leader>Sw / r
-    Is there like a history view of where I've jumped to and from?
+   Keep my buffers open? <leader>Sw / r
+   Is there like a history view of where I've jumped to and from?
 
 
 Diff Mode:
-    ]c / [c to go to next/prev change
-    dp :diffput
-    do :diffget (obtain)
-    Align by putting the same mark in both files, then doing :set diffanchors='a
-    :diffoff to exit
-    need to add vertical to diffopt?
+   ]c / [c to go to next/prev change
+   dp :diffput
+   do :diffget (obtain)
+   Align by putting the same mark in both files, then doing :set diffanchors='a
+   :diffoff to exit
+   need to add vertical to diffopt?
 
-    
+   
 
 
 Equivalent of Ctrl+D in VSCode
-    Did this in 
+   Did this in 
 Matt:
 You can either hit * over a word and it will jump to the next instance or you can press gd and it will go to the first instance in a file. After highlighting, hitting n will jump to the next instance in the file. Hitting N will jump to the previous instance in the file.
 Austin Carpenter

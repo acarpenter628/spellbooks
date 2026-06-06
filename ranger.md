@@ -1,168 +1,168 @@
 
 macros for shell
-        %f   the highlighted file
-        %d   the path of the current directory
-        %s   the selected files in the current directory
-        %t   all tagged files in the current directory
-        %c   the full paths of the currently copied/cut files
-        %p   the full paths of selected files
+      %f   the highlighted file
+      %d   the path of the current directory
+      %s   the selected files in the current directory
+      %t   all tagged files in the current directory
+      %c   the full paths of the currently copied/cut files
+      %p   the full paths of selected files
 
 keybindings
  MAIN BINDINGS
-       h, j, k, l    Move left, down, up or right
+      h, j, k, l   Move left, down, up or right
 
-       ^D or J, ^U or K
-                     Move a half page down, up
+      ^D or J, ^U or K
+                Move a half page down, up
 
-       H, L          Move back and forward in the history
+      H, L        Move back and forward in the history
 
-       gg            Move to the top
+      gg         Move to the top
 
-       G             Move to the bottom
+      G          Move to the bottom
 
-       [, ]          Move up and down in the parent directory.
+      [, ]        Move up and down in the parent directory.
 
-       ^R            Reload everything
+      ^R         Reload everything
 
-       F             Toggle freeze_files setting.  When active (indicated by a cyan FROZEN message in the status bar), directories and files will not be loaded, improving performance when all the files
-                     you need are already loaded.  This does not affect file previews, which can be toggled with zp.  Also try disabling the preview of directories with zP.
+      F          Toggle freeze_files setting.  When active (indicated by a cyan FROZEN message in the status bar), directories and files will not be loaded, improving performance when all the files
+                you need are already loaded.  This does not affect file previews, which can be toggled with zp.  Also try disabling the preview of directories with zP.
 
-       ^L            Redraw the screen
+      ^L         Redraw the screen
 
-       i             Inspect the current file in a bigger window.
+      i          Inspect the current file in a bigger window.
 
-       E             Edit the current file in $VISUAL otherwise $EDITOR otherwise "vim"
+      E          Edit the current file in $VISUAL otherwise $EDITOR otherwise "vim"
 
-       S             Open a shell in the current directory
+      S          Open a shell in the current directory
 
-       ?             Opens this man page
+      ?          Opens this man page
 
-       W             Opens the log window where you can review messages that pop up at the bottom.
+      W          Opens the log window where you can review messages that pop up at the bottom.
 
-       w             Opens the task window where you can view and modify background processes that currently run in ranger.  In there, you can type "dd" to abort a process and "J" or "K" to change the
-                     priority of a process.  Only one process is run at a time.
+      w          Opens the task window where you can view and modify background processes that currently run in ranger.  In there, you can type "dd" to abort a process and "J" or "K" to change the
+                priority of a process.  Only one process is run at a time.
 
-       ^C            Stop the currently running background process that ranger has started, like copying files, loading directories or file previews.
+      ^C         Stop the currently running background process that ranger has started, like copying files, loading directories or file previews.
 
-       <octal>=, +<who><what>, -<who><what>
-                     Change the permissions of the selection.  For example, "777=" is equivalent to "chmod 777 %s", "+ar" does "chmod a+r %s", "-ow" does "chmod o-w %s" etc.
+      <octal>=, +<who><what>, -<who><what>
+                Change the permissions of the selection.  For example, "777=" is equivalent to "chmod 777 %s", "+ar" does "chmod a+r %s", "-ow" does "chmod o-w %s" etc.
 
-       yy            Copy (yank) the selection, like pressing Ctrl+C in modern GUI programs.  (You can also type "ya" to add files to the copy buffer, "yr" to remove files again, or "yt" for toggling.)
+      yy         Copy (yank) the selection, like pressing Ctrl+C in modern GUI programs.  (You can also type "ya" to add files to the copy buffer, "yr" to remove files again, or "yt" for toggling.)
 
-       dd            Cut the selection, like pressing Ctrl+X in modern GUI programs.  (There are also "da", "dr" and "dt" shortcuts equivalent to "ya", "yr" and "yt".)
+      dd         Cut the selection, like pressing Ctrl+X in modern GUI programs.  (There are also "da", "dr" and "dt" shortcuts equivalent to "ya", "yr" and "yt".)
 
-       pp            Paste the files which were previously copied or cut, like pressing Ctrl+V in modern GUI programs.
+      pp         Paste the files which were previously copied or cut, like pressing Ctrl+V in modern GUI programs.
 
-                  Conflicts will be renamed by appending an '_' (and a counter if necessary), resulting in "file.ext_", "file.ext_0", etc. If you prefer "file_.ext" you can use the "paste_ext" command.
+              Conflicts will be renamed by appending an '_' (and a counter if necessary), resulting in "file.ext_", "file.ext_0", etc. If you prefer "file_.ext" you can use the "paste_ext" command.
 
-       po            Paste the copied/cut files, overwriting existing files.
+      po         Paste the copied/cut files, overwriting existing files.
 
-       pP, pO        Like pp and po, but queues the operation so that it will be executed after any other operations.  Reminder: type "w" to open the task window.
+      pP, pO      Like pp and po, but queues the operation so that it will be executed after any other operations.  Reminder: type "w" to open the task window.
 
-       pl, pL        Create symlinks (absolute or relative) to the copied files
+      pl, pL      Create symlinks (absolute or relative) to the copied files
 
-       phl           Create hardlinks to the copied files
+      phl         Create hardlinks to the copied files
 
-       pht           Duplicate the subdirectory tree of the copied directory, then create hardlinks for each contained file into the new directory tree.
+      pht         Duplicate the subdirectory tree of the copied directory, then create hardlinks for each contained file into the new directory tree.
 
-       mX            Create a bookmark with the name X
+      mX         Create a bookmark with the name X
 
-       `X            Move to the bookmark with the name X
+      `X         Move to the bookmark with the name X
 
-       n             Find the next file.  By default, this gets you to the newest file in the directory, but if you search something using the keys /, cm, ct, ..., it will get you to the next found entry.
+      n          Find the next file.  By default, this gets you to the newest file in the directory, but if you search something using the keys /, cm, ct, ..., it will get you to the next found entry.
 
-       N             Find the previous file.
+      N          Find the previous file.
 
-       oX            Change the sort method (like in mutt)
+      oX         Change the sort method (like in mutt)
 
-       zX            Change settings.  See the settings section for a list of settings and their hotkey.
+      zX         Change settings.  See the settings section for a list of settings and their hotkey.
 
-       u?            Universal undo-key.  Depending on the key that you press after "u", it either restores closed tabs (uq), removes tags (ut), clears the copy/cut buffer (ud), starts the reversed visual
-                     mode (uV) or clears the selection (uv).
+      u?         Universal undo-key.  Depending on the key that you press after "u", it either restores closed tabs (uq), removes tags (ut), clears the copy/cut buffer (ud), starts the reversed visual
+                mode (uV) or clears the selection (uv).
 
-       f             Quickly navigate by entering a part of the filename.
+      f          Quickly navigate by entering a part of the filename.
 
-       Space         Mark a file.
+      Space       Mark a file.
 
-       v             Toggle the mark-status of all files
+      v          Toggle the mark-status of all files
 
-       V             Starts the visual mode, which selects all files between the starting point and the cursor until you press ESC.  To unselect files in the same way, use "uV".
+      V          Starts the visual mode, which selects all files between the starting point and the cursor until you press ESC.  To unselect files in the same way, use "uV".
 
-       /             Search for files in the current directory.
+      /          Search for files in the current directory.
 
-       :             Open the console.
+      :          Open the console.
 
-       !             Open the console with the content "shell " so you can quickly run commands
+      !          Open the console with the content "shell " so you can quickly run commands
 
-       @             Open the console with the content "shell  %s", placing the cursor before the " %s" so you can quickly run commands with the current selection as the argument.
+      @          Open the console with the content "shell  %s", placing the cursor before the " %s" so you can quickly run commands with the current selection as the argument.
 
-       r             Open the console with the content "open with " so you can decide which program to use to open the current file selection.
+      r          Open the console with the content "open with " so you can decide which program to use to open the current file selection.
 
-       cd            Open the console with the content "cd "
+      cd         Open the console with the content "cd "
 
-       ^P            Open the console with the most recent command.
+      ^P         Open the console with the most recent command.
 
-       Alt-N         Open a tab. N has to be a number from 0 to 9. If the tab doesn't exist yet, it will be created.
+      Alt-N       Open a tab. N has to be a number from 0 to 9. If the tab doesn't exist yet, it will be created.
 
-       Alt-l, Alt-r  Shift a tab left, respectively right.
+      Alt-l, Alt-r  Shift a tab left, respectively right.
 
-       gn, ^N        Create a new tab.
+      gn, ^N      Create a new tab.
 
-       gt, gT        Go to the next or previous tab. You can also use TAB and SHIFT+TAB instead.
+      gt, gT      Go to the next or previous tab. You can also use TAB and SHIFT+TAB instead.
 
-       gc, ^W        Close the current tab.  The last tab cannot be closed this way.
+      gc, ^W      Close the current tab.  The last tab cannot be closed this way.
 
-       ~             Toggle between viewmodes. See viewmode in SETTINGS section.
+      ~          Toggle between viewmodes. See viewmode in SETTINGS section.
 
-       M             A key chain that allows you to quickly change the line mode of all the files of the current directory.  For a more permanent solution, use the command "default_linemode" in your
-                     rc.conf.
+      M          A key chain that allows you to quickly change the line mode of all the files of the current directory.  For a more permanent solution, use the command "default_linemode" in your
+                rc.conf.
 
-       .d            Apply the typefilter "directory".
+      .d         Apply the typefilter "directory".
 
-       .f            Apply the typefilter "file".
+      .f         Apply the typefilter "file".
 
-       .l            Apply the typefilter "symlink".
+      .l         Apply the typefilter "symlink".
 
-       .m            Apply a new mimetype filter.
+      .m         Apply a new mimetype filter.
 
-       .n            Apply a new filename filter.
+      .n         Apply a new filename filter.
 
-       .#            Apply a new hash filter.
+      .#         Apply a new hash filter.
 
-       ."            Apply a new duplicate filter.
+      ."         Apply a new duplicate filter.
 
-       .'            Apply a new unique filter.
+      .'         Apply a new unique filter.
 
-       .|            Combine the two topmost filters from the filter stack in the "OR" relationship, instead of the "AND" used implicitly.
+      .|         Combine the two topmost filters from the filter stack in the "OR" relationship, instead of the "AND" used implicitly.
 
-       .&            Explicitly combine the two topmost filters in the "AND" relationship.  Usually not needed because filters are implicitly in this relationship though might be useful in more
-                     complicated scenarios.
+      .&         Explicitly combine the two topmost filters in the "AND" relationship.  Usually not needed because filters are implicitly in this relationship though might be useful in more
+                complicated scenarios.
 
-       .!            Negate the topmost filter.
+      .!         Negate the topmost filter.
 
-       .r            Rotate the filter stack by N elements. Where N is provided as a numeric prefix like vim's count and defaults to 1, i.e. move the topmost element to the bottom of the stack.
+      .r         Rotate the filter stack by N elements. Where N is provided as a numeric prefix like vim's count and defaults to 1, i.e. move the topmost element to the bottom of the stack.
 
-       .c            Clear the filter stack.
+      .c         Clear the filter stack.
 
-       .*            Decompose the topmost filter combinator (e.g. ".!", ".|").
+      .*         Decompose the topmost filter combinator (e.g. ".!", ".|").
 
-       .p            Pop the topmost filter from the filter stack.
+      .p         Pop the topmost filter from the filter stack.
 
-       ..            Show the current filter stack state.
+      ..         Show the current filter stack state.
 
   READLINE-LIKE BINDINGS IN THE CONSOLE
-       ^B, ^F        Move left and right (B for back, F for forward)
+      ^B, ^F      Move left and right (B for back, F for forward)
 
-       ^P, ^N        Move up and down (P for previous, N for Next)
+      ^P, ^N      Move up and down (P for previous, N for Next)
 
-       ^A, ^E        Move to the start or to the end
+      ^A, ^E      Move to the start or to the end
 
-       Alt-B, Alt-LEFT
-                     Move backwards by words.
+      Alt-B, Alt-LEFT
+                Move backwards by words.
 
-       Alt-F, Alt-RIGHT
-                     Move forwards by words.
+      Alt-F, Alt-RIGHT
+                Move forwards by words.
 
-       ^D            Delete the current character.
+      ^D         Delete the current character.
 
-       ^H            Backspace.
+      ^H         Backspace.
