@@ -1,32 +1,36 @@
 file [file] - see basic info about file
 exiftool [file.jpg] - see file exif data  (not installed it lookes like)
 
+
 Put my SSH keys on another computer:  ssh-copy-id linuxdev@rdulab-ud8
 open nvim remotely with my config:  nvim scp://linuxdev@rdulab-ud8//home/linuxdev/Downloads/
+   allegedly - untested
 
+
+Can I add a zellij/wezterm hotkey that maps to CtrlX CtrlE?
+I should convert all these to md and fix my 4 spaces
+Update fzf to match whatever nvim is doing.  rg?  fd?
 
 
 Log terminal output with it still visible in the terminal
-
-Doesn't get created until command is done running
-command |& tee output.txt
-Appends instead of overwrites:  command |& tee -a output.txt
-
-https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file
+   Doesn't get created until command is done running
+   command |& tee output.txt
+   Appends instead of overwrites:  command |& tee -a output.txt
+   https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file
 
 
 
 Memeblast:
-~/Downloads$ w #lists displays, probably only one, use the number for the next command
-~/Downloads$ export DISPLAY=:1
-~/Downloads$ eog trash_bureaucrat.png
+   ~/Downloads$ w #lists displays, probably only one, use the number for the next command
+   ~/Downloads$ export DISPLAY=:1
+   ~/Downloads$ eog trash_bureaucrat.png
 
-xmessage "hello world" displays a pop up I think
+   xmessage "hello world" displays a pop up I think
 
 
 
 get into mounted build from command line
-docker exec -it [deployable name] bash
+   docker exec -it [deployable name] bash
 
 
 get size of folder:  du -hs /path/to/directory
@@ -43,6 +47,9 @@ find files:
 
 
       print them all:  for file in $(find -name "*.crc*"); do cat "$file"; echo; done
+
+   or just fzf enter and then start typing
+   or Ctrl+T to do autocomplete with fzf
 
 
 Command line history "event designators"
@@ -143,6 +150,9 @@ untar:  tar -xzvf archive.tar.gz
    or ouch
 
 
+symlink:
+   ln -s [file i want to make a shortcut to] .
+
 
 
 apps to download for new setups:
@@ -150,6 +160,7 @@ apps to download for new setups:
    nvim
       fd
       ripgrep
+      fzf
    ouch
    ascii-matrix
    zellij
@@ -160,16 +171,5 @@ apps to download for new setups:
    tldr
    btop
 
-What do I need to just use a mac as a terminal?
-   most of the above
-   ghostty?  doesn't support sixel.  iTerm2 does though.  
-   Iterm2 looks like it has a "scroll/copy with keyboard" mode.  
-      Looks like zellij has this if I'm not in windows terminal or nomachine?  
-      or I can do unlock s e to open the buffer in nvim for copying
-      wezterm looks like the only thing that has both retro effects and sixel support
-   can I remap ctrl?  sounds like it
-   It uses zsh by default but I can download bash.  
-
 
 put my git config in github?
-Can I add a zellij  hotkey that maps to CtrlX CtrlE?

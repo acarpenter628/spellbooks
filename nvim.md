@@ -13,9 +13,52 @@ View current setting:
 
 To learn:
 quickfix list?
-Surround around my selection?
+Surround - mini.surround, visual select
+   vi) or vi) or vib will select (within parenthesees)  This conflicts with block insert
+   g[/] for "around"?  
 Matt used the cool `gw` two letter jump in helix.  i think this is hop.vim or mini-jump2d
-He also mapped stuff to replace $ and ^/_,  gl and gh, I should do those
+recording macros
+   q[register] to start recording
+   q to end recording
+   @[register] to play recording
+      Q or @@ to play the last one
+function/variable outline?  I think that's done in telescope?
+   gO
+better session handling?
+gotta learn diffs so I can troll brett
+undo/redo
+   undo tree?
+Is there like a history view of where I've jumped to and from?
+Remap ctrl pgup/down for tabs
+
+misc:
+   [<space> to insert line above
+   ]<space> to insert line below
+   Ctrl A to increment a number
+   Ctrl X to decrement a number
+   I could maybe do a record a register to copy/paste a line and increment the number.  could be neat
+   )/( will jump to previous/next sentence
+
+Session saves folding, it looks like
+
+
+Substitute:
+   mapped, write these down.  Looks like %s started above the cursor
+
+
+netrw:
+   :Ex to enter
+   % for new file
+   v for open in vertical split
+   o for open in horiz split
+   Need to learn neotree equivalent
+
+paste in command/insert mode:
+Ctrl+R [register]
+      " for unnamed
+      / last search
+
+
 tabs
    :help tabpage
    hotkey to make a new tab
@@ -28,79 +71,6 @@ tabs
          ctrl pgup/down
             what can I remap those to?  ctrl ,. maybe?  
       :tabs to see them
-recording macros
-   q[register] to start recording
-   q to end recording
-   @[register] to play recording
-      Q or @@ to play the last one
-function/variable outline?  I think that's done in telescope?
-   gO
-better session handling?
-gotta learn diffs so I can troll brett
-
-[<space> to insert line above
-]<space> to insert line below
-
-Session saves folding, it looks like
-
-
-Substitute:
-   * over word, then :s//[replacement], then n& to do the next one
-      I think there's something I can use for like "current selected" to instead of having to * first
-         <C-r><C-w> to paste word under cursor
-      But I want to use my selection, not just the word. 
-         - copy the replacement
-         - highlight/visual select the old
-         - *
-         - N (?)
-         - :s//<C-R>"
-         - n&
-         Surely I can map this to something?
-      Maybe I can git gud at different registers.  select, "ay, "by, line select the area, then maybe a mapping to :s/<C-r>a/<C-r>b/g in visual mode
-      maybe I do mappings for like leader y a, leader y b, numbers?
-      Numbers autofill with deleted text
-   or
-      :%s/[old]/[replacement]/gc, then y/n/q for each one
-         do I need the %? - this makes it global for the whole file.  not needed if I have a selection?  
-         I think this is the one
-   or
-      Visual select (by lines?) to limit it to there
-
-I think I can map *N:%s//<C-r>"/gc<cr> to a key?
-
-Ctrl A to increment a number
-Ctrl X to decrement a number
-I could maybe do a record a register to copy/paste a line and increment the number.  could be neat
-
-
-navigations:  
-vi) or vi) or vib will select (within parenthesees)
-vt) will select up to the closing paren
-)/( will jump to previous/next sentence
-
-Syntax highlighting for note files?
- - comment things out
-   - do I need a full lsp to gcc?  I can map ctrl + / to insert // at the beginning of the line or something
- - highlight - and * and ~?
-  - set tab width to 2 if I'm in a note file so I can fold?
- - numbers?
- - strings/parens
- - not '
- - punctuation?  At least question mark
- - syntax highlighting for like AI (action item), similar to how i have //ABC TODO NOW 
-
-netrw:
-   :Ex to enter
-   % for new file
-   v for open in vertical split
-   o for open in horiz split
-   Need to learn neotree equivalent
-
-paste in command mode:
-Ctrl+R [register]
-      " for unnamed
-
-
 
 panes / windows
 ^w as first key
@@ -120,14 +90,9 @@ buffers
       or space space to fuzzyfind
 marks
 auto complete
-   ^y to accept
+   ^y to accept, or maybe just keep typing.  Is ^x anything?
    ^n/p to cycle
 
-g
-   u/U for upper/lower
-      use visual first?
-   v to go to your last visual select
-      
 Searching
    * or # to search for highlighted text or active word
    \< and \> indicate start and end of word
@@ -135,15 +100,8 @@ Searching
 Switch buffers
    double space - fuzzy find open buffers
    Switching buffers:
-      ]b / ]B to cycle
-
 
 Navigate within Buffer
-   Todo
-      jump to next function
-         ]]  looks like
-      function list?  pin to right?
-
    ' to jump around
       '' - last place jumped from 
       '[] - beginning/end of previously changed/yanked text
@@ -154,7 +112,11 @@ Navigate within Buffer
 
    <number>gg - jump to line number
 
-   ]] to next function
+   ]] to next function in theory
+
+
+   gv to repeat your last visual select
+   gi to insert at last insert location
 
    {/} go to next/previous blank line?
       beginning/end of paragraph
@@ -166,31 +128,11 @@ Navigate within Buffer
 
 
    Follow link in help  ^]
-      
 
 
 
 multi-clipboard
    " lists them, select the letter/number, then y/d/p
-
-
-Completion:
-   Ctrl n/p to cycle them
-   Ctrl Y to insert, maybe X?
-
-
-
-To learn:
-Jump to git changes - <leader>gn
-   gitsigns?
-      :Gitsigns diffthis
-         peel one onion at a time tho
-
-undo/redo - don't fuck it up
-   undo tree?
-
-tabs
-   gt to go to next tab page
 
 
 folding
@@ -204,9 +146,6 @@ marks
    no "next mark"?
 
 
-Projects
-   Keep my buffers open? <leader>Sw / r
-   Is there like a history view of where I've jumped to and from?
 
 
 Diff Mode:
@@ -217,22 +156,3 @@ Diff Mode:
    :diffoff to exit
    need to add vertical to diffopt?
 
-   
-
-
-Equivalent of Ctrl+D in VSCode
-   Did this in 
-Matt:
-You can either hit * over a word and it will jump to the next instance or you can press gd and it will go to the first instance in a file. After highlighting, hitting n will jump to the next instance in the file. Hitting N will jump to the previous instance in the file.
-Austin Carpenter
-Does it keep all of them selected though?
-I think there's a visual mode way to do that maybe
-Matthew Riley
-Yeah it keeps them all selected
-Austin Carpenter
-dope
-so I could just ciw and it clears all of them? (edited) 
-Matthew Riley
-There is probably another way that I don't know about, but once things are highlighted, I would just do a substitution. So in your case I would do :%s///g. This is also the command you use to basically find and replace.
-From :help substitute, structure of that command is: :[range]s[ubstitute]/{pattern}/{string}/[flags] [count] (edited) 
-When you already have something highlighted leaving the pattern portions empty just means to use what you have highlighted. String is what you are replacing pattern with so leaving it empty leaves it empty. The g flag means on every instance of a line. The % range means the entire file.
