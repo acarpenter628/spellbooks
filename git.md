@@ -1,46 +1,44 @@
+Undo:
+   Undo the last commit and discard the changes completely:
+      git reset --hard HEAD~1
+   Undo the last commit (remove it from your history), but keep the changes from that commit in the working copy
+      git reset HEAD~1 
+   History preserving, undo a previous commit
+      git revert -n <sha>
 
-Undo the last commit and discard the changes completely:
-git reset --hard HEAD~1
+Diff:
+   See the diffs in a commit:
+      git show <sha>
+   git diff --staged
+      diff staged vs repo
+   git diff stash@{1}
+      diff stash vs working copy
 
-Undo the last commit (remove it from your history), but keep the changes from that commit in the working copy
-git reset HEAD~1 
+Merging:
+   git merge --squash <branchname>
+      pull branch into staging area
+      does stage, but doesn't commit
+   git merge --no-commit <branchname>
+      Merge without committing.
+   Cherry pick without committing :
+      git cherry-pick -n <HASH>
 
-History preserving, undo a previous commit
-git revert -n <sha>
-
-See the diffs in a commit:
-git show <sha>
-
-Branch with sorting: (I think I put one of these in my gitconfig?)
-git branch -v --sort=-committerdate  # DESC
-git branch -v --sort=committerdate  # ASC
-
-git merge --squash <branchname>
-   pull branch into staging area
-   does stage, but doesn't commit
-
-git merge --no-commit <branchname>
-   Merge without committing.
-git diff --staged
-   diff staged vs repo
-
-git stash apply n	
-restore stashed modification but do not remove from stash list
-(n specifies stash number, default is 0 which is most recent stash)
+Stash:
+   restore stashed modification but do not remove from stash list
+      git stash apply n	
+         (n specifies stash number, default is 0 which is most recent stash)
+   remove stashed state from stash list but don't apply
+      git stash drop n	
+   clear stash list
+      git stash clear	
 
 
-git stash drop n	
-remove stashed state from stash list but don't apply
-
-git diff stash@{1}
-   diff stash vs working copy
-
-git stash clear	
-clear stash list
-
-Cherry pick without committing :
-git cherry-pick -n <HASH>
 
 Remove from repo without deleting:
-File:  git rm -f --cached  folder/derp.txt
-Folder:  git rm -f -r --cached  folder/subfolder/
+   File:  git rm -f --cached  folder/derp.txt
+   Folder:  git rm -f -r --cached  folder/subfolder/
+
+
+Branch with sorting: (I think I put one of these in my gitconfig?)
+   git branch -v --sort=-committerdate  # DESC
+   git branch -v --sort=committerdate  # ASC
