@@ -11,7 +11,7 @@ View current setting:
    table:
       :lua print(vim.inspect(vim.g.termfeatures))
 
-To learn:
+To learn/fix:
 quickfix list?
 Surround - mini.surround, visual select
    vi) or vi) or vib will select (within parenthesees)  This conflicts with block insert
@@ -22,16 +22,18 @@ recording macros
    q to end recording
    @[register] to play recording
       Q or @@ to play the last one
-function/variable outline?  I think that's done in telescope?
-   gO
 better session handling?
 gotta learn diffs so I can troll brett
 undo/redo
    undo tree?
 Is there like a history view of where I've jumped to and from?
-Remap ctrl pgup/down for tabs
+Remap ctrl pgup/down for tabs.  maybe Ctrl ,. 
+   :tabn :tabN
+Fix capital K
 
 misc:
+   In cmd or search mode, Ctrl F will do something similar to Ctrl X Ctrl E in bash.  Combination of history and current line
+      Ctrl C to exit without running
    [<space> to insert line above
    ]<space> to insert line below
    Ctrl A to increment a number
