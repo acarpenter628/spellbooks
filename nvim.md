@@ -35,6 +35,10 @@ Remap ctrl pgup/down for tabs.  maybe Ctrl ,.
    Capital L/H for now, but idk how I feel about that
    :tabn :tabN
 Fix capital K
+Quickfix list:
+   Example:  
+      - Use telescope for a list of imports or something
+      - :cdo to rename them all
 
 
 misc:
