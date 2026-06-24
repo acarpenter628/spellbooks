@@ -33,6 +33,11 @@ Stash:
       git stash clear	
 
 
+Remove unversioned files:  
+   git clean -fd
+      -n for dry run
+      -i for interactive
+         Not 100% sure how this works, I thought i was creating a list to clean, but maybe it was to save?
 
 Remove from repo without deleting:
    File:  git rm -f --cached  folder/derp.txt

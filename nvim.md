@@ -28,8 +28,14 @@ undo/redo
    undo tree?
 Is there like a history view of where I've jumped to and from?
 Remap ctrl pgup/down for tabs.  maybe Ctrl ,. 
+   That doesn't seem to work without remapping those in wezterm
+      I have to make sure I don't collide with whatever I map them to
+         zellij only supports up to F12, Wezterm only supports up to F24
+   Unclear about C-h and C-S-h, but that would be good too
+   Capital L/H for now, but idk how I feel about that
    :tabn :tabN
 Fix capital K
+
 
 misc:
    In cmd or search mode, Ctrl F will do something similar to Ctrl X Ctrl E in bash.  Combination of history and current line
@@ -98,6 +104,9 @@ auto complete
 Searching
    * or # to search for highlighted text or active word
    \< and \> indicate start and end of word
+   fzf:
+      Ctrl + Enter: refine results from current string
+      ! before a string to exclude it
    
 Switch buffers
    double space - fuzzy find open buffers

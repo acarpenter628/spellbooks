@@ -51,8 +51,13 @@ find files:
    or just fzf enter and then start typing
    or Ctrl+T to do autocomplete with fzf
 
+History:
+   Append: history -a
+   Read:   history -r
 
 Command line history "event designators"
+   Probably don't need these if I can just write every command in nvim
+      Mapped Ctrl A to Ctrl X Ctrl E I think
 
    !! - whole line of last command (command and all args)
    !* - all arguments of last command
