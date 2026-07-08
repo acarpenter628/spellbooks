@@ -13,6 +13,13 @@ Diff:
       diff staged vs repo
    git diff stash@{1}
       diff stash vs working copy
+   different branch/sha:
+      diff [branch/sha] -- file
+   Ignore whitespace
+      git diff --ignore-space-at-eol
+   exclude certain filetypes / folders
+      git diff -- ':!*.out' ':!*/folder/*'
+
 
 Merging:
    git merge --squash <branchname>
@@ -22,6 +29,9 @@ Merging:
       Merge without committing.
    Cherry pick without committing :
       git cherry-pick -n <HASH>
+   Pull changes if you're alrady mid merge (in conflicted state):
+      git checkout --theirs .
+      or git checkout --ours .
 
 Stash:
    restore stashed modification but do not remove from stash list

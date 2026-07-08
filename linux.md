@@ -1,6 +1,6 @@
 file [file] - see basic info about file
 exiftool [file.jpg] - see file exif data  (not installed it lookes like)
-
+showkey -a
 
 Put my SSH keys on another computer:  ssh-copy-id linuxdev@rdulab-ud8
 open nvim remotely with my config:  nvim scp://linuxdev@rdulab-ud8//home/linuxdev/Downloads/
@@ -38,12 +38,13 @@ get size of folder:  du -hs /path/to/directory
 
 find files:
    rg --files | rg filename
+      does partial matches
       can be a regexp?
 
    find . -name "*.map"
       Then I can pipe that into a grep .map for highlighting I guess
       exclude with exclamation point:   find -name "*.bit*" ! -path "*path*"
-      I think I have to do something else to get it to follow simlinks
+   find -L . [...] to follow symlinks
 
 
       print them all:  for file in $(find -name "*.crc*"); do cat "$file"; echo; done
@@ -57,7 +58,8 @@ History:
 
 Command line history "event designators"
    Probably don't need these if I can just write every command in nvim
-      Mapped Ctrl A to Ctrl X Ctrl E I think
+      Mapped Ctrl A to Ctrl X Ctrl E
+   fc to open your previous line in $EDITOR
 
    !! - whole line of last command (command and all args)
    !* - all arguments of last command
@@ -115,13 +117,9 @@ https://www.geeksforgeeks.org/linux-unix/bash-brace-expansion-in-linux-with-exam
 cp -v file1.txt{,.bak}
 
 
-
-Ctrl+x, Ctrl+e to open your current line in $EDITOR
-fc to open your previous line in $EDITOR
-
-
 batch rename:
 for f in *.txt; do mv -- "$f" "new_$f"; done
+Look into xargs
 
 
 To run a script at startup:
@@ -177,4 +175,3 @@ apps to download for new setups:
    btop
 
 
-put my git config in github?

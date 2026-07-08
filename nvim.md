@@ -10,6 +10,10 @@ View current setting:
       :lua print(vim.o.tabstop)
    table:
       :lua print(vim.inspect(vim.g.termfeatures))
+   See mappings
+      :nmap g to see all mappings that start with g
+      :map or :verbose map for all 
+
 
 To learn/fix:
 quickfix list?
@@ -35,6 +39,7 @@ Remap ctrl pgup/down for tabs.  maybe Ctrl ,.
    Capital L/H for now, but idk how I feel about that
    :tabn :tabN
 Fix capital K
+   I guess this is because of the treesitter main/master branch
 Quickfix list:
    Example:  
       - Use telescope for a list of imports or something
