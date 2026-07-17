@@ -6,6 +6,9 @@ Undo:
    History preserving, undo a previous commit
       git revert -n <sha>
 
+Look into a merge without commit so I can review first and keep mac/linux commits separate withotu using PRs
+
+
 Diff:
    See the diffs in a commit:
       git show <sha>

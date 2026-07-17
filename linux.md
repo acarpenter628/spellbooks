@@ -1,6 +1,9 @@
 file [file] - see basic info about file
 exiftool [file.jpg] - see file exif data  (not installed it lookes like)
 showkey -a
+lscpu - get cpu info
+wget [url] to download
+sudo apt install ./your_package_name.deb
 
 Put my SSH keys on another computer:  ssh-copy-id linuxdev@rdulab-ud8
 open nvim remotely with my config:  nvim scp://linuxdev@rdulab-ud8//home/linuxdev/Downloads/
@@ -151,6 +154,7 @@ xrandr --output eDP-1 --brightness .5
 
 untar:  tar -xzvf archive.tar.gz
    or ouch
+   or aliased untar
 
 
 symlink:
@@ -159,19 +163,35 @@ symlink:
 
 
 apps to download for new setups:
-   ranger
-   nvim
-      fd
-      ripgrep
-      fzf
-   ouch
-   ascii-matrix
-   zellij
-   OpenComic?  yomikiru?
-   nerdfont
-   wezterm
-   batcat
-   tldr
-   btop
+ - ranger
+    - https://github.com/ranger/ranger
+ - nvim
+    - fd
+       - apt install fd-find
+       - Not sure this one's actually needed
+    - ripgrep
+       - https://github.com/BurntSushi/ripgrep/releases
+    - fzf
+       - sudo apt install fzf
+ - ouch
+    - https://github.com/ouch-org/ouch/releases
+ - ascii-matrix
+ - delta
+    - https://github.com/dandavison/delta/releases
+ - zellij
+    - https://zellij.dev
+ - OpenComic?  yomikiru?
+ - nerdfont
+    - https://www.nerdfonts.com/font-downloads
+    - Adwaita and Caskaydia
+ - wezterm
+    - https://wezterm.org/install/linux.html#using-the-apt-repo
+ - batcat
+    - sudo apt install bat
+ - tldr
+    - https://github.com/tldr-pages/tlrc/releases/tag/v1.13.1
+ - btop
+    - sudo snap install btop
+ - sixel
 
 
