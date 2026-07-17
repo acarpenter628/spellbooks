@@ -1,14 +1,17 @@
+Misc
 file [file] - see basic info about file
 exiftool [file.jpg] - see file exif data  (not installed it lookes like)
+Remount fstab things: mount -a
 showkey -a
 lscpu - get cpu info
 wget [url] to download
 sudo apt install ./your_package_name.deb
+watch -n [seconds] [command] - run [command] every [seconds] seconds
 
 Put my SSH keys on another computer:  ssh-copy-id linuxdev@rdulab-ud8
 open nvim remotely with my config:  nvim scp://linuxdev@rdulab-ud8//home/linuxdev/Downloads/
-   allegedly - untested
-
+   allegedly - untested.  Double slashes are intentional
+      Double slashe is only if you're using an absolute path, so like nvim scp://linuxdev@rdulab-ud8/Downloads/ would work?  maybe that needs a ~/ in there?
 
 Can I add a zellij/wezterm hotkey that maps to CtrlX CtrlE?
 I should convert all these to md and fix my 4 spaces
@@ -103,7 +106,6 @@ Command line history "event designators"
    Rename:  mv filename.txt !#:1:r.log
 
 
-Remount fstab things: mount -a
 
 Chaining commands
   ; to do the next command regardless
@@ -122,7 +124,9 @@ cp -v file1.txt{,.bak}
 
 batch rename:
 for f in *.txt; do mv -- "$f" "new_$f"; done
+for f in *.txt; do cp "$f" "${f/txt/md}"; done
 Look into xargs
+ - Doesn't really help here
 
 
 To run a script at startup:
