@@ -16,7 +16,7 @@ Diff:
    different branch/sha:
       diff [branch/sha] -- file
    Ignore whitespace
-      git diff --ignore-space-at-eol
+      git diff -w
    exclude certain filetypes / folders
       git diff -- ':!*.out' ':!*/folder/*'
 

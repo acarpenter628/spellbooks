@@ -88,6 +88,12 @@ tabs
          ctrl pgup/down
             what can I remap those to?  ctrl ,. maybe?  
       :tabs to see them
+   :tabm [argument]
+      if [argument] has +/-, moves relative to current location
+      If 0, moves to the beginning
+      if blank, moves to the end
+      if number without +/-, moves to that location, only if it's farther to the right
+         So to move from 4 to 3, you can either do :tabm -1 or :tabm 0 :tabm 3
 
 panes / windows
 ^w as first key
