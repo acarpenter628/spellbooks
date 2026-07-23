@@ -12,6 +12,8 @@ Look into a merge without commit so I can review first and keep mac/linux commit
 Diff:
    See the diffs in a commit:
       git show <sha>
+         For merge:
+         git show --first-parent <commit-hash>
    git diff --staged
       diff staged vs repo
    git diff stash@{1}
@@ -22,6 +24,9 @@ Diff:
       git diff -w
    exclude certain filetypes / folders
       git diff -- ':!*.out' ':!*/folder/*'
+   only show changes in this branch (like a PR)
+      git diff --merge-base <main-branch>
+
 
 
 Merging:
@@ -32,7 +37,7 @@ Merging:
       Merge without committing.
    Cherry pick without committing :
       git cherry-pick -n <HASH>
-   Pull changes if you're alrady mid merge (in conflicted state):
+   Pull changes if you're already mid merge (in conflicted state):
       git checkout --theirs .
       or git checkout --ours .
 

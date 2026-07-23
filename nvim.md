@@ -1,6 +1,7 @@
 
 
 :help vim.keymap
+   or <leader>sk to search with telescope
 Shift + K to go to a help page
    Not limited to vim
 
@@ -15,7 +16,7 @@ View current setting:
       :map or :verbose map for all 
 
 
-To learn/fix:
+Todo learn/fix:
 quickfix list?
 Surround - mini.surround, visual select
    vi) or vi) or vib will select (within parenthesees)  This conflicts with block insert
@@ -31,6 +32,7 @@ gotta learn diffs so I can troll brett
 undo/redo
    undo tree?
 Is there like a history view of where I've jumped to and from?
+   <leader>sj
 Remap ctrl pgup/down for tabs.  maybe Ctrl ,. 
    That doesn't seem to work without remapping those in wezterm
       I have to make sure I don't collide with whatever I map them to
@@ -169,7 +171,7 @@ marks
    Looks like lower case is for just setting/jumping to marks in the current buffer and upper case or number is for setting/jumping across buffers.
    Then you can run :marks to see all set marks.
 
-   no "next mark"?
+   no "next mark", but I can see them all with telescope.  Including the like "last line exited this buffer" type automagic ones
 
 
 

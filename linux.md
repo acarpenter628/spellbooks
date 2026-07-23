@@ -7,8 +7,10 @@ lscpu - get cpu info
 wget [url] to download
 sudo apt install ./your_package_name.deb
 watch -n [seconds] [command] - run [command] every [seconds] seconds
+disk space available:  df -h
+disk space used:  du -h /path
 
-Put my SSH keys on another computer:  ssh-copy-id linuxdev@rdulab-ud8
+Put my SSH keys on another computer:  ssh-copy-id [remote-username]@[remote-computer]
 open nvim remotely with my config:  nvim scp://linuxdev@rdulab-ud8//home/linuxdev/Downloads/
    allegedly - untested.  Double slashes are intentional
       Double slashe is only if you're using an absolute path, so like nvim scp://linuxdev@rdulab-ud8/Downloads/ would work?  maybe that needs a ~/ in there?
