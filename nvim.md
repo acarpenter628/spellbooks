@@ -14,9 +14,16 @@ View current setting:
    See mappings
       :nmap g to see all mappings that start with g
       :map or :verbose map for all 
+   vim.o is for basic data, vim.opt lets you work with tables or use things like "append" 
+      vim.o is global, but vim.bo or vim.wo can be scoped to buffer or window
 
 
 Todo learn/fix:
+Block select:
+   removed surround because I thought it was breaking block insert, but apparently that has to be capital I
+   set ve=block
+   Block paste doesn't seem to work for me, probably something I've broken with my many remaps
+   doing $ to select the end of the line will append to the end of each selected line, without whitespace problems.  Looks like it works with ve=block, it's just a little slower maybe
 quickfix list?
 Surround - mini.surround, visual select
    vi) or vi) or vib will select (within parenthesees)  This conflicts with block insert
@@ -25,8 +32,9 @@ Matt used the cool `gw` two letter jump in helix.  i think this is hop.vim or mi
 recording macros
    q[register] to start recording
    q to end recording
-   @[register] to play recording
-      Q or @@ to play the last one
+   @[register] to execute recording
+      @@ to execute the last run one
+      Q to execute the last recorded one
 better session handling?
 gotta learn diffs so I can troll brett
 undo/redo
@@ -46,6 +54,7 @@ Quickfix list:
    Example:  
       - Use telescope for a list of imports or something
       - :cdo to rename them all
+make J/K into 5j and 5k, set gj and gk to J and K
 
 
 misc:

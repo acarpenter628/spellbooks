@@ -8,6 +8,9 @@ Undo:
 
 Look into a merge without commit so I can review first and keep mac/linux commits separate withotu using PRs
 
+Log:
+   git log [optional branch name] [optional file/path]
+
 
 Diff:
    See the diffs in a commit:
@@ -19,7 +22,7 @@ Diff:
    git diff stash@{1}
       diff stash vs working copy
    different branch/sha:
-      diff [branch/sha] -- file
+      diff [branch/sha] -- [file/path]
    Ignore whitespace
       git diff -w
    exclude certain filetypes / folders

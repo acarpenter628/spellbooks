@@ -9,6 +9,7 @@ sudo apt install ./your_package_name.deb
 watch -n [seconds] [command] - run [command] every [seconds] seconds
 disk space available:  df -h
 disk space used:  du -h /path
+grep [OPTION]... PATTERNS [FILE]...
 
 Put my SSH keys on another computer:  ssh-copy-id [remote-username]@[remote-computer]
 open nvim remotely with my config:  nvim scp://linuxdev@rdulab-ud8//home/linuxdev/Downloads/
@@ -63,6 +64,8 @@ find files:
 History:
    Append: history -a
    Read:   history -r
+   or -n to only read new rows?  if i do -r, does that double the size of my history?
+   Maybe alias a history -a and -r
 
 Command line history "event designators"
    Probably don't need these if I can just write every command in nvim
