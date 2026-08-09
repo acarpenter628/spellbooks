@@ -10,6 +10,9 @@ watch -n [seconds] [command] - run [command] every [seconds] seconds
 disk space available:  df -h
 disk space used:  du -h /path
 grep [OPTION]... PATTERNS [FILE]...
+restart nomachine:  sudo /usr/NX/bin/nxserver --restart
+restart network:  sudo netplan apply
+sshfs username@source_server:/path/to/folder /mnt/remote_directory -o follow_symlinks
 
 Put my SSH keys on another computer:  ssh-copy-id [remote-username]@[remote-computer]
 open nvim remotely with my config:  nvim scp://linuxdev@rdulab-ud8//home/linuxdev/Downloads/
