@@ -10,6 +10,11 @@ Look into a merge without commit so I can review first and keep mac/linux commit
 
 Log:
    git log [optional branch name] [optional file/path]
+Tags:
+   See all:
+      git tag --merged <branch_name> --sort=-creatordate
+   Only most recent:
+      git describe --tags
 
 
 Diff:
