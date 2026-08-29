@@ -13,6 +13,9 @@ grep [OPTION]... PATTERNS [FILE]...
 restart nomachine:  sudo /usr/NX/bin/nxserver --restart
 restart network:  sudo netplan apply
 sshfs username@source_server:/path/to/folder /mnt/remote_directory -o follow_symlinks
+Show hard drives:
+   sudo nvme list 
+   lsblk 
 
 Put my SSH keys on another computer:  ssh-copy-id [remote-username]@[remote-computer]
 open nvim remotely with my config:  nvim scp://linuxdev@rdulab-ud8//home/linuxdev/Downloads/
@@ -72,8 +75,9 @@ History:
 
 Command line history "event designators"
    Probably don't need these if I can just write every command in nvim
-      Mapped Ctrl A to Ctrl X Ctrl E
+      Mapped Ctrl A to edit-and-execute-command
    fc to open your previous line in $EDITOR
+      ABC TODO NOW map something to Ctrl C fc?
 
    !! - whole line of last command (command and all args)
    !* - all arguments of last command
@@ -166,12 +170,18 @@ xrandr --output eDP-1 --brightness .5
 
 untar:  tar -xzvf archive.tar.gz
    or ouch
-   or aliased untar
+   or alias untar to that
 
 
 symlink:
    ln -s [file i want to make a shortcut to] .
 
+Apps to investigate:
+ - ranger alternatives
+    - vifm + vifm-sixel-preview or thu.sh?  This seems like a lot of work
+    - lf
+    - yazi
+ - lsix
 
 
 apps to download for new setups:
@@ -188,6 +198,7 @@ apps to download for new setups:
  - ouch
     - https://github.com/ouch-org/ouch/releases
  - ascii-matrix
+    - ABC TODO NOW 
  - delta
     - https://github.com/dandavison/delta/releases
  - zellij
@@ -205,5 +216,7 @@ apps to download for new setups:
  - btop
     - sudo snap install btop
  - sixel
+    - imagemagick
+    - lsix?
 
 
