@@ -72,8 +72,9 @@ History:
 
 Command line history "event designators"
    Probably don't need these if I can just write every command in nvim
-      Mapped Ctrl A to Ctrl X Ctrl E
+      Mapped Ctrl A to edit-and-execute-command
    fc to open your previous line in $EDITOR
+      ABC TODO NOW map something to Ctrl C fc?
 
    !! - whole line of last command (command and all args)
    !* - all arguments of last command
