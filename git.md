@@ -3,6 +3,8 @@ Undo:
       git reset --hard HEAD~1
    Undo the last commit (remove it from your history), but keep the changes from that commit in the working copy
       git reset HEAD~1 
+   Reset to remote:
+      git reset --hard origin/<branch-name>
    History preserving, undo a previous commit
       git revert -n <sha>
 

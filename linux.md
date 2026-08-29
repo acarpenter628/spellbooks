@@ -166,12 +166,18 @@ xrandr --output eDP-1 --brightness .5
 
 untar:  tar -xzvf archive.tar.gz
    or ouch
-   or aliased untar
+   or alias untar to that
 
 
 symlink:
    ln -s [file i want to make a shortcut to] .
 
+Apps to investigate:
+ - ranger alternatives
+    - vifm + vifm-sixel-preview or thu.sh?  This seems like a lot of work
+    - lf
+    - yazi
+ - lsix
 
 
 apps to download for new setups:
@@ -188,6 +194,7 @@ apps to download for new setups:
  - ouch
     - https://github.com/ouch-org/ouch/releases
  - ascii-matrix
+    - ABC TODO NOW 
  - delta
     - https://github.com/dandavison/delta/releases
  - zellij
@@ -205,5 +212,7 @@ apps to download for new setups:
  - btop
     - sudo snap install btop
  - sixel
+    - imagemagick
+    - lsix?
 
 
