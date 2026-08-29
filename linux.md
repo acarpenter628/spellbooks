@@ -1,26 +1,33 @@
-Misc
-file [file] - see basic info about file
-exiftool [file.jpg] - see file exif data  (not installed it lookes like)
-Remount fstab things: mount -a
-showkey -a
-lscpu - get cpu info
-wget [url] to download
-sudo apt install ./your_package_name.deb
-watch -n [seconds] [command] - run [command] every [seconds] seconds
-disk space available:  df -h
-disk space used:  du -h /path
-grep [OPTION]... PATTERNS [FILE]...
-restart nomachine:  sudo /usr/NX/bin/nxserver --restart
-restart network:  sudo netplan apply
-sshfs username@source_server:/path/to/folder /mnt/remote_directory -o follow_symlinks
-Show hard drives:
-   sudo nvme list 
-   lsblk 
+Misc commands
+   file [file] - see basic info about file
+   exiftool [file.jpg] - see file exif data  (not installed it lookes like)
+   Remount fstab things: mount -a
+   showkey -a
+   lscpu - get cpu info
+   wget [url] to download
+   sudo apt install ./your_package_name.deb
+   watch -n [seconds] [command] - run [command] every [seconds] seconds
+   disk space available:  df -h
+   disk space used:  du -h /path
+   grep [OPTION]... PATTERNS [FILE]...
+   restart nomachine:  sudo /usr/NX/bin/nxserver --restart
+   restart network:  sudo netplan apply
+   sshfs username@source_server:/path/to/folder /mnt/remote_directory -o follow_symlinks
+   sudoedit - run $EDITOR as root but with your user settings.  use this to edit (for example) /etc/hosts with my nvim setup
+   scp [file] [user]@[computer]:/~
+      To windows, scp [file] [user]@[computer]: puts it in C:\Users\[user]
+   Show hard drives:
+      sudo nvme list 
+      lsblk 
+   Put my SSH keys on another computer:  ssh-copy-id [remote-username]@[remote-computer]
+   open nvim remotely with my config:  nvim scp://linuxdev@rdulab-ud8//home/linuxdev/Downloads/
+      allegedly - untested.  Double slashes are intentional
+         Double slashe is only if you're using an absolute path, so like nvim scp://linuxdev@rdulab-ud8/Downloads/ would work?  maybe that needs a ~/ in there?
+Important files:
+   /etc/mtab - files mounted right now
+   /etc/fstab - files that mount at startup
+   /etc/hosts - custom hostnames
 
-Put my SSH keys on another computer:  ssh-copy-id [remote-username]@[remote-computer]
-open nvim remotely with my config:  nvim scp://linuxdev@rdulab-ud8//home/linuxdev/Downloads/
-   allegedly - untested.  Double slashes are intentional
-      Double slashe is only if you're using an absolute path, so like nvim scp://linuxdev@rdulab-ud8/Downloads/ would work?  maybe that needs a ~/ in there?
 
 Can I add a zellij/wezterm hotkey that maps to CtrlX CtrlE?
 I should convert all these to md and fix my 4 spaces
