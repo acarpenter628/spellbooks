@@ -1,4 +1,20 @@
 
+Diffs:
+ - Basic difftool
+    - not sure if I really need anything here.  If it's just one file, I can just do it from the normal editor
+    - Idk maybe there's some value in the side by side
+       - Don't love how it focuses in the left side by default
+    - No word wrap either
+ - Difftool directory
+    - :Difftool is fine but not great
+    - There was that plugin that looked good, then i saved that git config on reddit to use it with more args (maybe I don't actualy need that though?)
+    - Pass in a custom diffmode lua that replaces <leader>e with toggling the file list
+ - Mergetool
+    - Need something better here
+    - Probs:
+       - diffput/get doesn't pull the full hunk
+          - Maybe this isn't the end of the world either
+       - leaves temp files around?  this isn't so bad I guess
 
 :help vim.keymap
    or <leader>sk to search with telescope
@@ -107,6 +123,9 @@ tabs
          So to move from 4 to 3, you can either do :tabm -1 or :tabm 0 :tabm 3
 
 panes / windows
+^w +/- for height, >< for width
+   :res +/-X to change height by X rows
+   z10<cr> to make the window 10 lines tall
 ^w as first key
    map to space w? - done
    s/v for split horizontal/vertical
@@ -187,6 +206,7 @@ marks
 
 Diff Mode:
    ]c / [c to go to next/prev change
+      Maybe I can map <leader>gn in there
    dp :diffput
    do :diffget (obtain)
    Align by putting the same mark in both files, then doing :set diffanchors='a
