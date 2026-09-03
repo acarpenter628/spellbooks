@@ -22,16 +22,20 @@ Misc commands
    Put my SSH keys on another computer:  ssh-copy-id [remote-username]@[remote-computer]
    open nvim remotely with my config:  nvim scp://linuxdev@rdulab-ud8//home/linuxdev/Downloads/
       allegedly - untested.  Double slashes are intentional
-         Double slashe is only if you're using an absolute path, so like nvim scp://linuxdev@rdulab-ud8/Downloads/ would work?  maybe that needs a ~/ in there?
+         Double slash is only if you're using an absolute path, so like nvim scp://linuxdev@rdulab-ud8/Downloads/ would work?  maybe that needs a ~/ in there?
+   lsb_release -a  - show distro info?
+   ip -br -c a     - Show IP addresses
+   which -a  shows all bins
+
 Important files:
    /etc/mtab - files mounted right now
    /etc/fstab - files that mount at startup
    /etc/hosts - custom hostnames
 
 
-Can I add a zellij/wezterm hotkey that maps to CtrlX CtrlE?
-I should convert all these to md and fix my 4 spaces
-Update fzf to match whatever nvim is doing.  rg?  fd?
+Todo:
+   Update fzf to match whatever nvim is doing.  rg?  fd?
+   Maybe convert this file so it has bullet points?  And separate the misc commands better
 
 
 Log terminal output with it still visible in the terminal
