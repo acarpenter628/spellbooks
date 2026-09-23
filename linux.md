@@ -20,6 +20,7 @@ Misc commands
       sudo nvme list 
       lsblk 
    Put my SSH keys on another computer:  ssh-copy-id [remote-username]@[remote-computer]
+      From Windows:  type %USERPROFILE%\.ssh\id_rsa.pub | ssh user@remote_host "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
    open nvim remotely with my config:  nvim scp://linuxdev@rdulab-ud8//home/linuxdev/Downloads/
       allegedly - untested.  Double slashes are intentional
          Double slash is only if you're using an absolute path, so like nvim scp://linuxdev@rdulab-ud8/Downloads/ would work?  maybe that needs a ~/ in there?
@@ -88,11 +89,10 @@ Command line history "event designators"
    Probably don't need these if I can just write every command in nvim
       Mapped Ctrl A to edit-and-execute-command
    fc to open your previous line in $EDITOR
-      ABC TODO NOW map something to Ctrl C fc?
 
    !! - whole line of last command (command and all args)
    !* - all arguments of last command
-   !$ - first argument of last command  (is that right?  seems like last would make more sense)
+   !$ - last argument of last command
 
    s performs substitutions. For example, to change “foo” with “bar” in the last argument:
    ls /tmp/foo.txt
@@ -199,6 +199,7 @@ apps to download for new setups:
  - ranger
     - https://github.com/ranger/ranger
  - nvim
+    - Snap is fine
     - fd
        - apt install fd-find
        - Not sure this one's actually needed
@@ -206,6 +207,8 @@ apps to download for new setups:
        - https://github.com/BurntSushi/ripgrep/releases
     - fzf
        - sudo apt install fzf
+    - tree sitter
+       - Download through cargo to get permissions and stuff to work
  - ouch
     - https://github.com/ouch-org/ouch/releases
  - ascii-matrix

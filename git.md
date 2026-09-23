@@ -8,8 +8,6 @@ Undo:
    History preserving, undo a previous commit
       git revert -n <sha>
 
-Look into a merge without commit so I can review first and keep mac/linux commits separate withotu using PRs
-
 Log:
    git log [optional branch name] [optional file/path]
 Tags:
