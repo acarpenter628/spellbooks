@@ -93,6 +93,7 @@ Command line history "event designators"
    !! - whole line of last command (command and all args)
    !* - all arguments of last command
    !$ - last argument of last command
+   !^ - first argument of last command
 
    s performs substitutions. For example, to change “foo” with “bar” in the last argument:
    ls /tmp/foo.txt
@@ -209,10 +210,10 @@ apps to download for new setups:
        - sudo apt install fzf
     - tree sitter
        - Download through cargo to get permissions and stuff to work
+    - clangd for C
  - ouch
     - https://github.com/ouch-org/ouch/releases
  - ascii-matrix
-    - ABC TODO NOW 
  - delta
     - https://github.com/dandavison/delta/releases
  - zellij

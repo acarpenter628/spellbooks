@@ -1,3 +1,6 @@
+Worktree:
+   git worktree add [path] [branch]
+
 Undo:
    Undo the last commit and discard the changes completely:
       git reset --hard HEAD~1

@@ -19,7 +19,8 @@ Diffs:
 :help vim.keymap
    or <leader>sk to search with telescope
 Shift + K to go to a help page
-   Not limited to vim
+   Not limited to vim, shows the floating box in code
+   Broke this, changed it to gk but only for the floating code definition
 
 
 View current setting:
