@@ -37,6 +37,8 @@ Important files:
 Todo:
    Update fzf to match whatever nvim is doing.  rg?  fd?
    Maybe convert this file so it has bullet points?  And separate the misc commands better
+   Useful stuff on the Ranger wiki:  https://github.com/ranger/ranger/wiki/Keybindings#send-selected-files-to-trash
+   Remove some of the wezterm backgrounds I'll never use
 
 
 Log terminal output with it still visible in the terminal

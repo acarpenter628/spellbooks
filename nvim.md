@@ -1,21 +1,4 @@
 
-Diffs:
- - Basic difftool
-    - not sure if I really need anything here.  If it's just one file, I can just do it from the normal editor
-    - Idk maybe there's some value in the side by side
-       - Don't love how it focuses in the left side by default
-    - No word wrap either
- - Difftool directory
-    - :Difftool is fine but not great
-    - There was that plugin that looked good, then i saved that git config on reddit to use it with more args (maybe I don't actualy need that though?)
-    - Pass in a custom diffmode lua that replaces <leader>e with toggling the file list
- - Mergetool
-    - Need something better here
-    - Probs:
-       - diffput/get doesn't pull the full hunk
-          - Maybe this isn't the end of the world either
-       - leaves temp files around?  this isn't so bad I guess
-
 :help vim.keymap
    or <leader>sk to search with telescope
 Shift + K to go to a help page
@@ -59,11 +42,6 @@ undo/redo
 Is there like a history view of where I've jumped to and from?
    <leader>sj
 Remap ctrl pgup/down for tabs.  maybe Ctrl ,. 
-   That doesn't seem to work without remapping those in wezterm
-      I have to make sure I don't collide with whatever I map them to
-         zellij only supports up to F12, Wezterm only supports up to F24
-   Unclear about C-h and C-S-h, but that would be good too
-   Capital L/H for now, but idk how I feel about that
    :tabn :tabN
 Fix capital K
    I guess this is because of the treesitter main/master branch
@@ -71,7 +49,7 @@ Quickfix list:
    Example:  
       - Use telescope for a list of imports or something
       - :cdo to rename them all
-make J/K into 5j and 5k, set gj and gk to J and K
+made J/K into 5j and 5k, set gj and gk to J and K
 
 
 misc:
@@ -88,15 +66,15 @@ Session saves folding, it looks like
 
 
 Substitute:
-   mapped, write these down.  Looks like %s started above the cursor
+   mapped, write these down. 
 
 
-netrw:
-   :Ex to enter
-   % for new file
-   v for open in vertical split
-   o for open in horiz split
-   Need to learn neotree equivalent
+neotree:
+   a for new file
+   A for new folder
+   s for open in vertical split
+   S for open in horiz split
+   t for open in new tab
 
 paste in command/insert mode:
 Ctrl+R [register]
