@@ -176,6 +176,7 @@ To run a script at startup:
    sudo systemctl enable --now myscript.service
 
 
+pkill -P <PPID> to kill child processes like Anakin Skywalker
 
 
 Adjust brightness:
