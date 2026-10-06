@@ -1,19 +1,20 @@
-o - sort
-z - settings/show/hide
-   zi - preview images
-   zh - show/hide hidden
-f - incremental filter
+Hotkeys:
+- o - sort
+- z - settings/show/hide
+   - zi - preview images
+   - zh - show/hide hidden
+- f - incremental filter
 
 macros for shell
-      %f   the highlighted file
-      %d   the path of the current directory
-      %s   the selected files in the current directory
-      %t   all tagged files in the current directory
-      %c   the full paths of the currently copied/cut files
-      %p   the full paths of selected files
+ - %f   the highlighted file
+ - %d   the path of the current directory
+ - %s   the selected files in the current directory
+ - %t   all tagged files in the current directory
+ - %c   the full paths of the currently copied/cut files
+ - %p   the full paths of selected files
 
 keybindings
- MAIN BINDINGS
+MAIN BINDINGS
       h, j, k, l   Move left, down, up or right
 
       ^D or J, ^U or K
@@ -155,7 +156,7 @@ keybindings
 
       ..         Show the current filter stack state.
 
-  READLINE-LIKE BINDINGS IN THE CONSOLE
+READLINE-LIKE BINDINGS IN THE CONSOLE
       ^B, ^F      Move left and right (B for back, F for forward)
 
       ^P, ^N      Move up and down (P for previous, N for Next)

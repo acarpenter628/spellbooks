@@ -1,143 +1,138 @@
 Misc commands
-   file [file] - see basic info about file
-   exiftool [file.jpg] - see file exif data  (not installed it lookes like)
-   Remount fstab things: mount -a
-   showkey -a
-   lscpu - get cpu info
-   wget [url] to download
-   sudo apt install ./your_package_name.deb
-   watch -n [seconds] [command] - run [command] every [seconds] seconds
-   disk space available:  df -h
-   disk space used:  du -h /path
-   grep [OPTION]... PATTERNS [FILE]...
-   restart nomachine:  sudo /usr/NX/bin/nxserver --restart
-   restart network:  sudo netplan apply
-   sshfs username@source_server:/path/to/folder /mnt/remote_directory -o follow_symlinks
-      Mac:  -o kernel_cache,allow_other,auto_cache,reconnect,no_readahead,follow_symlinks
-   sudoedit - run $EDITOR as root but with your user settings.  use this to edit (for example) /etc/hosts with my nvim setup
-   scp [file] [user]@[computer]:/~
-      To windows, scp [file] [user]@[computer]: puts it in C:\Users\[user]
-   Show hard drives:
-      sudo nvme list 
-      lsblk 
-   Put my SSH keys on another computer:  ssh-copy-id [remote-username]@[remote-computer]
-      From Windows:  type %USERPROFILE%\.ssh\id_rsa.pub | ssh user@remote_host "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
-   open nvim remotely with my config:  nvim scp://linuxdev@rdulab-ud8//home/linuxdev/Downloads/
-      allegedly - untested.  Double slashes are intentional
-         Double slash is only if you're using an absolute path, so like nvim scp://linuxdev@rdulab-ud8/Downloads/ would work?  maybe that needs a ~/ in there?
-   lsb_release -a  - show distro info?
-   ip -br -c a     - Show IP addresses
-   which -a  shows all bins
+- grep [OPTION]... PATTERNS [FILE]...
+- ln -s [file i want to make a shortcut to] .
+- wget [url] to download
+- sshfs username@source_server:/path/to/folder /mnt/remote_directory -o follow_symlinks
+   - Mac:  -o kernel_cache,allow_other,auto_cache,reconnect,no_readahead,follow_symlinks
+- sudoedit - run $EDITOR as root but with your user settings.  use this to edit (for example) /etc/hosts with my nvim setup
+- scp [file] [user]@[computer]:/~
+   - To windows, scp [file] [user]@[computer]: puts it in C:\Users\[user]
+- Put my SSH keys on another computer:  ssh-copy-id [remote-username]@[remote-computer]
+   - From Windows:  type %USERPROFILE%\.ssh\id_rsa.pub | ssh user@remote_host "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+- sudo apt install ./your_package_name.deb
+- file [file] - see basic info about file
+- exiftool [file.jpg] - see file exif data  (not installed it lookes like)
+- Remount fstab things: mount -a
+- showkey -a
+- lscpu - get cpu info
+- watch -n [seconds] [command] - run [command] every [seconds] seconds
+- disk space available:  df -h
+- disk space used:  du -hs /path
+   - leave off s to see subfolder details
+- restart nomachine:  sudo /usr/NX/bin/nxserver --restart
+- restart network:  sudo netplan apply
+- Show hard drives:
+   - sudo nvme list 
+   - lsblk 
+- open nvim remotely with my config:  nvim scp://linuxdev@rdulab-ud8//home/linuxdev/Downloads/
+   - allegedly - untested.  Double slashes are intentional
+      - Double slash is only if you're using an absolute path, so like nvim scp://linuxdev@rdulab-ud8/Downloads/ would work?  maybe that needs a ~/ in there?
+- lsb_release -a  - show distro info?
+- ip -br -c a     - Show IP addresses
+- which -a  shows all bins
 
 Important files:
-   /etc/mtab - files mounted right now
-   /etc/fstab - files that mount at startup
-   /etc/hosts - custom hostnames
+- /etc/mtab - files mounted right now
+- /etc/fstab - files that mount at startup
+- /etc/hosts - custom hostnames
 
 
 Todo:
-   Update fzf to match whatever nvim is doing.  rg?  fd?
-   Maybe convert this file so it has bullet points?  And separate the misc commands better
-   Useful stuff on the Ranger wiki:  https://github.com/ranger/ranger/wiki/Keybindings#send-selected-files-to-trash
-   Remove some of the wezterm backgrounds I'll never use
+- Update fzf to match whatever nvim is doing.  rg?  fd?
+- Maybe convert this file so it has bullet points?  And separate the misc commands better
+- Useful stuff on the Ranger wiki:  https://github.com/ranger/ranger/wiki/Keybindings#send-selected-files-to-trash
+- Remove some of the wezterm backgrounds I'll never use
 
 
 Log terminal output with it still visible in the terminal
-   Doesn't get created until command is done running
-   command |& tee output.txt
-   Appends instead of overwrites:  command |& tee -a output.txt
-   https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file
+- Doesn't get created until command is done running
+- command |& tee output.txt
+- Appends instead of overwrites:  command |& tee -a output.txt
+- https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file
 
 
 
 Memeblast:
-   ~/Downloads$ w #lists displays, probably only one, use the number for the next command
-   ~/Downloads$ export DISPLAY=:1
-   ~/Downloads$ eog trash_bureaucrat.png
-
-   xmessage "hello world" displays a pop up I think
+- ~/Downloads$ w #lists displays, probably only one, use the number for the next command
+- ~/Downloads$ export DISPLAY=:1
+- ~/Downloads$ eog trash_bureaucrat.png
+- xmessage "hello world" displays a pop up I think
 
 
 
 get into mounted build from command line
-   docker exec -it [deployable name] bash
+- docker exec -it [deployable name] bash
 
 
-get size of folder:  du -hs /path/to/directory
 
 
 find files:
-   rg --files | rg filename
-      does partial matches
-      can be a regexp?
-
-   find . -name "*.map"
-      Then I can pipe that into a grep .map for highlighting I guess
-      exclude with exclamation point:   find -name "*.bit*" ! -path "*path*"
-   find -L . [...] to follow symlinks
-
-
-      print them all:  for file in $(find -name "*.crc*"); do cat "$file"; echo; done
-
-   or just fzf enter and then start typing
-   or Ctrl+T to do autocomplete with fzf
+- rg --files | rg filename
+   - does partial matches
+   - can be a regexp?
+- find . -name "*.map"
+   - Then I can pipe that into a grep .map for highlighting I guess, maybe less
+   - exclude with exclamation point:   find -name "*.bit*" ! -path "*path*"
+   - find -L . [...] to follow symlinks
+   - print them all:  for file in $(find -name "*.crc*"); do cat "$file"; echo; done
+- or just fzf enter and then start typing
+- or Ctrl+T to do autocomplete with fzf
 
 History:
-   Append: history -a
-   Read:   history -r
-   or -n to only read new rows?  if i do -r, does that double the size of my history?
-   Maybe alias a history -a and -r
+- Append: history -a
+- Read:   history -r
+- or -n to only read new rows?  if i do -r, does that double the size of my history?
+- Maybe alias a history -a and -r
 
 Command line history "event designators"
-   Probably don't need these if I can just write every command in nvim
-      Mapped Ctrl A to edit-and-execute-command
-   fc to open your previous line in $EDITOR
+- Probably don't need these if I can just write every command in nvim
+   - Mapped Ctrl A to edit-and-execute-command
+- fc to open your previous line in $EDITOR
 
-   !! - whole line of last command (command and all args)
-   !* - all arguments of last command
-   !$ - last argument of last command
-   !^ - first argument of last command
+- !! - whole line of last command (command and all args)
+   - !* - all arguments of last command
+   - !$ - last argument of last command
+   - !^ - first argument of last command
 
-   s performs substitutions. For example, to change “foo” with “bar” in the last argument:
-   ls /tmp/foo.txt
-   echo !$:s/foo/bar/
+- s performs substitutions. For example, to change “foo” with “bar” in the last argument:
+   - ls /tmp/foo.txt
+   - echo !$:s/foo/bar/
 
-   gs substitutes all occurrences, not just the first one:
-   echo foo foo foo
-   echo !*:gs/foo/bar
+- gs substitutes all occurrences, not just the first one:
+   - echo foo foo foo
+   - echo !*:gs/foo/bar
 
-   p is a somewhat special modifier that is useful for cautious users. It prints the final command but does not execute it: 
-   ls /tmp/foo.txt
-   echo !$:s/foo/bar/:p
-   Not Rename:  mv filename.txt !#:1:p:r.log
-
-
-   Range of args:
-   Imagine you run a command, and realise that the arguments were correct, but
-   $ grep '(ping|pong)' afile
-   I wanted to match ping or pong in a file, but I used grep rather than egrep.
-   I start typing egrep, but I don’t want to re-type the other arguments, so I can use the !:1-$ shortcut to ask for all the arguments to the previous command from the second one (remember they’re zero-indexed) to the last one (represented by the $ sign):
-   $ egrep !:1-$
-   egrep '(ping|pong)' afile
-   This can also be used with any other numbers
+- p is a somewhat special modifier that is useful for cautious users. It prints the final command but does not execute it: 
+   - ls /tmp/foo.txt
+   - echo !$:s/foo/bar/:p
+   - Not Rename:  mv filename.txt !#:1:p:r.log
 
 
-   !#:1 – The ‘The Current Line’ One
-   I spent years occasionally wondering if I could reference an argument on the current line before finally looking it up and learning it. I wish I’d done so well before.
-   I most commonly use it to make backup files
-   $ cp /path/to/some/file !#:1.bak
-   cp /path/to/some/file /path/to/some/file.bak
+- Range of args:
+   - Imagine you run a command, and realise that the arguments were correct, but
+   - $ grep '(ping|pong)' afile
+   - I wanted to match ping or pong in a file, but I used grep rather than egrep.
+   - I start typing egrep, but I don’t want to re-type the other arguments, so I can use the !:1-$ shortcut to ask for all the arguments to the previous command from the second one (remember they’re zero-indexed) to the last one (represented by the $ sign):
+   - $ egrep !:1-$
+   - egrep '(ping|pong)' afile
+   - This can also be used with any other numbers
 
 
-   Backup:  cp /path/to/some/file !#:1.bak
-   Rename:  mv filename.txt !#:1:r.log
+- !#:1 – The ‘The Current Line’ One
+   - I spent years occasionally wondering if I could reference an argument on the current line before finally looking it up and learning it. I wish I’d done so well before.
+   - I most commonly use it to make backup files
+   - $ cp /path/to/some/file !#:1.bak
+   - cp /path/to/some/file /path/to/some/file.bak
+
+- Backup:  cp /path/to/some/file !#:1.bak
+- Rename:  mv filename.txt !#:1:r.log
 
 
 
 Chaining commands
-  ; to do the next command regardless
-  && only if the previous one passed
-  || only if the previous one failed
+- ; to do the next command regardless
+- && only if the previous one passed
+- || only if the previous one failed
 
 
 Shellcheck is a tool to "compile" shell scripts
@@ -145,15 +140,15 @@ Shellcheck is a tool to "compile" shell scripts
 
 
 look up curly brace expansion
-https://www.geeksforgeeks.org/linux-unix/bash-brace-expansion-in-linux-with-examples/
-cp -v file1.txt{,.bak}
+- https://www.geeksforgeeks.org/linux-unix/bash-brace-expansion-in-linux-with-examples/
+- cp -v file1.txt{,.bak}
 
 
 batch rename:
-for f in *.txt; do mv -- "$f" "new_$f"; done
-for f in *.txt; do cp "$f" "${f/txt/md}"; done
-Look into xargs
- - Doesn't really help here
+- for f in *.txt; do mv -- "$f" "new_$f"; done
+- for f in *.txt; do cp "$f" "${f/txt/md}"; done
+- Look into xargs
+   - Doesn't really help here
 
 
 To run a script at startup:
@@ -185,12 +180,8 @@ xrandr --output eDP-1 --brightness .5
 
 
 untar:  tar -xzvf archive.tar.gz
-   or ouch
-   or alias untar to that
+   or ouch d
 
-
-symlink:
-   ln -s [file i want to make a shortcut to] .
 
 Apps to investigate:
  - ranger alternatives
@@ -198,13 +189,16 @@ Apps to investigate:
     - lf
     - yazi
  - lsix
+ - mcat
+ - pandoc
+ - moar
 
 
 apps to download for new setups:
  - ranger
     - https://github.com/ranger/ranger
  - nvim
-    - Snap is fine
+    - Snap is fine, or download the nightly from github for multicursor
     - fd
        - apt install fd-find
        - Not sure this one's actually needed
@@ -226,6 +220,7 @@ apps to download for new setups:
  - nerdfont
     - https://www.nerdfonts.com/font-downloads
     - Adwaita and Caskaydia
+    - Terminess or Gojo if they're the right size
  - wezterm
     - https://wezterm.org/install/linux.html#using-the-apt-repo
  - batcat
@@ -237,5 +232,7 @@ apps to download for new setups:
  - sixel
     - imagemagick
     - lsix?
+    - mcat?
+    - timg?
 
 
