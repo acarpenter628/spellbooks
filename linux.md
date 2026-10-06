@@ -13,6 +13,7 @@ Misc commands
    restart nomachine:  sudo /usr/NX/bin/nxserver --restart
    restart network:  sudo netplan apply
    sshfs username@source_server:/path/to/folder /mnt/remote_directory -o follow_symlinks
+      Mac:  -o kernel_cache,allow_other,auto_cache,reconnect,no_readahead,follow_symlinks
    sudoedit - run $EDITOR as root but with your user settings.  use this to edit (for example) /etc/hosts with my nvim setup
    scp [file] [user]@[computer]:/~
       To windows, scp [file] [user]@[computer]: puts it in C:\Users\[user]

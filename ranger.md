@@ -1,3 +1,8 @@
+o - sort
+z - settings/show/hide
+   zi - preview images
+   zh - show/hide hidden
+f - incremental filter
 
 macros for shell
       %f   the highlighted file
