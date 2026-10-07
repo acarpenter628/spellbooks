@@ -30,6 +30,9 @@ Misc commands
 - lsb_release -a  - show distro info?
 - ip -br -c a     - Show IP addresses
 - which -a  shows all bins
+- lsof
+   - -p <PID> to see what files a process is using
+   - lsof /path/to/dir to see what processes are using a file or directory
 
 Important files:
 - /etc/mtab - files mounted right now
