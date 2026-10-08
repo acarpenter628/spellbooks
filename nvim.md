@@ -9,6 +9,10 @@ Shift + K to go to a help page
 View current setting:
 - setting:
    - :lua print(vim.o.tabstop)
+   - :set opt? - print current value of opt
+   - :set opt=value - sets opt to value
+   - :set opt - set opt to true
+   - :set noopt - set opt to false/0
 - table:
    - :lua print(vim.inspect(vim.g.termfeatures))
 - See mappings
@@ -16,6 +20,7 @@ View current setting:
    - :map or :verbose map for all 
 - vim.o is for basic data, vim.opt lets you work with tables or use things like "append" 
    - vim.o is global, but vim.bo or vim.wo can be scoped to buffer or window
+
 
 Replace last occurance of a string in the line:
 - :s/.*\zsTEXT_TO_FIND/TEXT_TO_REPLACE

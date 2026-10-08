@@ -9,6 +9,7 @@ Misc commands
    - To windows, scp [file] [user]@[computer]: puts it in C:\Users\[user]
 - Put my SSH keys on another computer:  ssh-copy-id [remote-username]@[remote-computer]
    - From Windows:  type %USERPROFILE%\.ssh\id_rsa.pub | ssh user@remote_host "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+- pushd to put directory on a directory stack, popd to cd to it and remove it from the stack
 - sudo apt install ./your_package_name.deb
 - file [file] - see basic info about file
 - exiftool [file.jpg] - see file exif data  (not installed it lookes like)
@@ -73,6 +74,8 @@ find files:
 - rg --files | rg filename
    - does partial matches
    - can be a regexp?
+   - -u to ignore the ignorelists (including gitignore)
+   - --hidden to also search hidden files
 - find . -name "*.map"
    - Then I can pipe that into a grep .map for highlighting I guess, maybe less
    - exclude with exclamation point:   find -name "*.bit*" ! -path "*path*"
@@ -195,6 +198,7 @@ Apps to investigate:
  - mcat
  - pandoc
  - moar
+ - termscp
 
 
 apps to download for new setups:
