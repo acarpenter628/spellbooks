@@ -142,7 +142,7 @@ Searching
 - 
 Switch buffers
 - double space - fuzzy find open buffers
-- Switching buffers:
+- :bd close buffer
 
 Navigate within Buffer
 - ' to jump around

@@ -34,6 +34,10 @@ Misc commands
 - lsof
    - -p <PID> to see what files a process is using
    - lsof /path/to/dir to see what processes are using a file or directory
+- pkill <PPID> to kill process
+   - pkill -P <PPID> to kill child processes - alias anakin
+   - Need an alias for kill process and its children
+
 
 Important files:
 - /etc/mtab - files mounted right now
@@ -178,7 +182,6 @@ To run a script at startup:
    sudo systemctl enable --now myscript.service
 
 
-pkill -P <PPID> to kill child processes like Anakin Skywalker
 
 
 Adjust brightness:
