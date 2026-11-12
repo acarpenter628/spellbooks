@@ -3,15 +3,16 @@ Misc commands
 - ln -s [file i want to make a shortcut to] .
 - wget [url] to download
 - sshfs username@source_server:/path/to/folder /mnt/remote_directory -o follow_symlinks
-   - Mac:  -o kernel_cache,allow_other,auto_cache,reconnect,no_readahead,follow_symlinks
 - sudoedit - run $EDITOR as root but with your user settings.  use this to edit (for example) /etc/hosts with my nvim setup
-- scp [file] [user]@[computer]:/~
+- scp [file] [user]@[computer]:path/to/remote
    - To windows, scp [file] [user]@[computer]: puts it in C:\Users\[user]
 - Put my SSH keys on another computer:  ssh-copy-id [remote-username]@[remote-computer]
    - From Windows:  type %USERPROFILE%\.ssh\id_rsa.pub | ssh user@remote_host "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
 - pushd to put directory on a directory stack, popd to cd to it and remove it from the stack
 - sudo apt install ./your_package_name.deb
 - file [file] - see basic info about file
+- stat [file] for access/modified time/user
+   - or date -r [file] for last modified time(?)
 - exiftool [file.jpg] - see file exif data  (not installed it lookes like)
 - Remount fstab things: mount -a
 - showkey -a
@@ -26,7 +27,7 @@ Misc commands
    - sudo nvme list 
    - lsblk 
 - open nvim remotely with my config:  nvim scp://linuxdev@rdulab-ud8//home/linuxdev/Downloads/
-   - allegedly - untested.  Double slashes are intentional
+   - allegedly - untested.  Double slashes after computer name are intentional
       - Double slash is only if you're using an absolute path, so like nvim scp://linuxdev@rdulab-ud8/Downloads/ would work?  maybe that needs a ~/ in there?
 - lsb_release -a  - show distro info?
 - ip -br -c a     - Show IP addresses

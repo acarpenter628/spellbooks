@@ -2,6 +2,7 @@
 :help vim.keymap
 - or <leader>sk to search with telescope
 Shift + K to go to a help page
+- remapped to gk to give me smaller vertical jumps, but maybe those can leave now that i've got flash setup
 - Not limited to vim, shows the floating box in code
 - Broke this, changed it to gk but only for the floating code definition
 
@@ -29,25 +30,23 @@ Replace last occurance of a string in the line:
 
 Todo learn/fix:
 - Block select:
-   - removed surround because I thought it was breaking block insert, but apparently that has to be capital I
    - set ve=block
-   - Block paste doesn't seem to work for me, probably something I've broken with my many remaps
+   - Block paste sort of works with the my_paste function that syncs ssh clipboards
    - doing $ to select the end of the line will append to the end of each selected line, without whitespace problems.  Looks like it works with ve=block, it's just a little slower maybe
 - quickfix list?
 - Surround - mini.surround, visual select
-   - vi) or vi) or vib will select (within parenthesees)  This conflicts with block insert
-   - g[/] for "around"?  
-- Matt used the cool `gw` two letter jump in helix.  i think this is hop.vim or mini-jump2d
+   - vi) or vi) or vib will select (within parenthesees) 
+   - g[/] for "around"?  not clear what that means
 - recording macros
    - q[register] to start recording
    - q to end recording
    - @[register] to execute recording
       - @@ to execute the last run one
       - Q to execute the last recorded one
-- better session handling?
+- better session handling?  Seems fine except autosave doesn't work
 - gotta learn diffs so I can troll brett
 - undo/redo
-   - undo tree?
+   - undo tree?  seems kinda useless without a plugin
 - Is there like a history view of where I've jumped to and from?
    - <leader>sj
 - Remap ctrl pgup/down for tabs.  maybe Ctrl ,. 
@@ -70,6 +69,8 @@ misc:
 - Ctrl X to decrement a number
 - I could maybe do a record a register to copy/paste a line and increment the number.  could be neat
 - )/( will jump to previous/next sentence
+- in visual, o to switch bt start and end of the selection
+- gv - select last visual
 
 Session saves folding, it looks like
 
@@ -86,9 +87,10 @@ neotree:
 - t for open in new tab
 
 paste in command/insert mode:
-Ctrl+R [register]
+Ctrl+r [register]
    " for unnamed
    / last search
+Ctrl+v mapped to Ctrl+r"
 
 
 tabs
@@ -101,7 +103,7 @@ tabs
       - gt for next tab, wraps
          - or gT for previous
       - ctrl pgup/down
-         - what can I remap those to?  ctrl ,. maybe?  
+         - remapped to ctrl ,. with some zellij remaps
    - :tabs to see them
 - :tabm [argument]
    - if [argument] has +/-, moves relative to current location
@@ -118,6 +120,7 @@ panes / windows
 - map to space w? - done
 - s/v for split horizontal/vertical
 - hjkl to select panes
+   - just ^hjkl without doing ^w first
 - = to distribute them
 - previews:
    - } show tag in preview
@@ -128,9 +131,8 @@ buffers
 - :ls to view
 - :b space tab to switch
    - or space space to fuzzyfind
-marks
 auto complete
-- ^y to accept, or maybe just keep typing.  Is ^x anything?
+- ^y to accept, or maybe just keep typing.
 - ^n/p to cycle
 
 Searching
@@ -139,7 +141,7 @@ Searching
 - fzf:
    - Ctrl + Enter: refine results from current string
    - ! before a string to exclude it
-- 
+
 Switch buffers
 - double space - fuzzy find open buffers
 - :bd close buffer
@@ -176,8 +178,11 @@ marks
 - m{a-zA-z} to set and '{a-zA-z} to jump to.
 - Looks like lower case is for just setting/jumping to marks in the current buffer and upper case or number is for setting/jumping across buffers.
 - Then you can run :marks to see all set marks.
-
 - no "next mark", but I can see them all with telescope.  Including the like "last line exited this buffer" type automagic ones
+   - '' is last place jumped from
+- ` instead of ' will send you to the character you put the mark at
+   - Remapped so actually the opposite of that
+   - Makes '] actually useful
 
 
 

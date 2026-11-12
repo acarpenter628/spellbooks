@@ -1,3 +1,9 @@
+FF without checkout:
+ - git fetch <remote> <remote_branch>:<local_branch>
+ - FF to a remote branch:  git fetch origin develop:develop
+ - FF to a local branch:  git fetch . feature:main
+    - Updates main to feature
+
 Worktree:
    git worktree add [path] [branch]
 
