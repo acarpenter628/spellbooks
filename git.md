@@ -45,6 +45,10 @@ Diff:
    - git diff --merge-base <main-branch>
 
 
+rebase:
+- Move my PR:
+   - git rebase --onto origin/[release] [main]
+      - -i to pick which commits I want to pull in, useful if I've merged in someone else's that's then fallen off
 
 Merging:
 - git merge --squash <branchname>
